@@ -4,25 +4,37 @@ import Layout from '../layouts/Layout.astro';
 
 <Layout title="LEAR - Centro de Fisioterapia & Rehabilitación Integral">
   <!-- Hero Section -->
-  <section class="bg-gradient-to-br from-[--color-lear-primary] to-[--color-lear-secondary] text-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+  <section class="relative bg-gradient-to-br from-[--color-lear-primary] via-[--color-lear-primary-light] to-[--color-lear-secondary] text-white overflow-hidden">
+    <!-- Decorative elements -->
+    <div class="absolute inset-0 opacity-10">
+      <div class="absolute top-0 right-0 w-96 h-96 bg-[--color-lear-secondary-light] rounded-full blur-3xl"></div>
+      <div class="absolute bottom-0 left-0 w-96 h-96 bg-[--color-lear-primary-dark] rounded-full blur-3xl"></div>
+    </div>
+
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32">
       <div class="text-center">
-        <h1 class="text-4xl md:text-6xl font-bold mb-6">
-          Bienvenidos a LEAR
+        <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+          Bienvenidos a <span class="text-[--color-lear-secondary-lighter]">LEAR</span>
         </h1>
-        <p class="text-xl md:text-2xl mb-8 text-white/90">
+        <p class="text-2xl md:text-3xl mb-6 font-medium">
           Centro de Fisioterapia & Rehabilitación Integral
         </p>
-        <p class="text-lg md:text-xl max-w-3xl mx-auto text-white/80">
+        <p class="text-lg md:text-xl max-w-3xl mx-auto text-white/90 mb-10 leading-relaxed">
           Tu bienestar es nuestra prioridad. Ofrecemos servicios profesionales de fisioterapia,
           rehabilitación y entrenamiento personalizado.
         </p>
-        <div class="mt-10">
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
           <a
             href="/servicios"
-            class="inline-block bg-white text-[--color-lear-primary] px-8 py-3 rounded-lg font-semibold hover:bg-white/90 transition-colors shadow-lg"
+            class="inline-block bg-white text-[--color-lear-primary] px-8 py-4 rounded-xl font-bold hover:bg-[--color-lear-secondary-lighter] hover:text-[--color-lear-primary-dark] transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105"
           >
             Conoce Nuestros Servicios
+          </a>
+          <a
+            href="/equipo"
+            class="inline-block bg-[--color-lear-secondary-light]/20 backdrop-blur-sm text-white border-2 border-white/50 px-8 py-4 rounded-xl font-bold hover:bg-white/20 transition-all duration-300"
+          >
+            Nuestro Equipo
           </a>
         </div>
       </div>
@@ -30,41 +42,59 @@ import Layout from '../layouts/Layout.astro';
   </section>
 
   <!-- Services Preview -->
-  <section class="py-20 bg-white">
+  <section class="py-20 bg-gradient-to-b from-white to-[--color-lear-bg-primary]">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-16">
-        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+        <span class="inline-block px-4 py-2 bg-[--color-lear-secondary]/10 text-[--color-lear-primary] rounded-full font-semibold text-sm mb-4">
+          LO QUE OFRECEMOS
+        </span>
+        <h2 class="text-4xl md:text-5xl font-bold text-[--color-lear-gray-900] mb-4">
           Nuestros Servicios
         </h2>
-        <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+        <p class="text-xl text-[--color-lear-gray-600] max-w-2xl mx-auto">
           Ofrecemos una amplia gama de servicios especializados para tu recuperación y bienestar
         </p>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         <!-- Service 1 -->
-        <div class="bg-[--color-lear-gray-50] rounded-xl p-8 hover:shadow-lg transition-shadow border border-[--color-lear-gray-200]">
-          <div class="text-[--color-lear-primary] text-4xl mb-4">🩺</div>
-          <h3 class="text-xl font-semibold text-[--color-lear-gray-900] mb-3">Fisioterapia</h3>
-          <p class="text-[--color-lear-gray-600]">
+        <div class="group relative bg-white rounded-2xl p-8 hover:shadow-2xl transition-all duration-300 border-2 border-[--color-lear-gray-100] hover:border-[--color-lear-primary]/30 hover:-translate-y-2">
+          <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-[--color-lear-primary] to-[--color-lear-primary-light] rounded-t-2xl"></div>
+          <div class="flex justify-center mb-6">
+            <div class="w-20 h-20 bg-gradient-to-br from-[--color-lear-primary]/10 to-[--color-lear-primary]/5 rounded-2xl flex items-center justify-center text-5xl group-hover:scale-110 transition-transform duration-300">
+              🩺
+            </div>
+          </div>
+          <h3 class="text-2xl font-bold text-[--color-lear-gray-900] mb-3 text-center">Fisioterapia</h3>
+          <p class="text-[--color-lear-gray-600] text-center leading-relaxed">
             Tratamientos profesionales de fisioterapia para tu recuperación y bienestar físico.
           </p>
         </div>
 
         <!-- Service 2 -->
-        <div class="bg-[--color-lear-gray-50] rounded-xl p-8 hover:shadow-lg transition-shadow border border-[--color-lear-gray-200]">
-          <div class="text-[--color-lear-secondary] text-4xl mb-4">💪</div>
-          <h3 class="text-xl font-semibold text-[--color-lear-gray-900] mb-3">Rehabilitación</h3>
-          <p class="text-[--color-lear-gray-600]">
+        <div class="group relative bg-white rounded-2xl p-8 hover:shadow-2xl transition-all duration-300 border-2 border-[--color-lear-gray-100] hover:border-[--color-lear-secondary]/30 hover:-translate-y-2">
+          <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-[--color-lear-secondary] to-[--color-lear-secondary-light] rounded-t-2xl"></div>
+          <div class="flex justify-center mb-6">
+            <div class="w-20 h-20 bg-gradient-to-br from-[--color-lear-secondary]/10 to-[--color-lear-secondary]/5 rounded-2xl flex items-center justify-center text-5xl group-hover:scale-110 transition-transform duration-300">
+              💪
+            </div>
+          </div>
+          <h3 class="text-2xl font-bold text-[--color-lear-gray-900] mb-3 text-center">Rehabilitación</h3>
+          <p class="text-[--color-lear-gray-600] text-center leading-relaxed">
             Programas integrales de rehabilitación adaptados a tus necesidades específicas.
           </p>
         </div>
 
         <!-- Service 3 -->
-        <div class="bg-[--color-lear-gray-50] rounded-xl p-8 hover:shadow-lg transition-shadow border border-[--color-lear-gray-200]">
-          <div class="text-[--color-lear-primary] text-4xl mb-4">🏋️</div>
-          <h3 class="text-xl font-semibold text-[--color-lear-gray-900] mb-3">Entrenamiento Personalizado</h3>
-          <p class="text-[--color-lear-gray-600]">
+        <div class="group relative bg-white rounded-2xl p-8 hover:shadow-2xl transition-all duration-300 border-2 border-[--color-lear-gray-100] hover:border-[--color-lear-accent]/30 hover:-translate-y-2">
+          <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-[--color-lear-accent] to-[--color-lear-secondary-light] rounded-t-2xl"></div>
+          <div class="flex justify-center mb-6">
+            <div class="w-20 h-20 bg-gradient-to-br from-[--color-lear-accent]/10 to-[--color-lear-accent]/5 rounded-2xl flex items-center justify-center text-5xl group-hover:scale-110 transition-transform duration-300">
+              🏋️
+            </div>
+          </div>
+          <h3 class="text-2xl font-bold text-[--color-lear-gray-900] mb-3 text-center">Entrenamiento Personalizado</h3>
+          <p class="text-[--color-lear-gray-600] text-center leading-relaxed">
             Planes de entrenamiento diseñados exclusivamente para alcanzar tus objetivos.
           </p>
         </div>
@@ -73,48 +103,68 @@ import Layout from '../layouts/Layout.astro';
       <div class="text-center mt-12">
         <a
           href="/servicios"
-          class="inline-block text-[--color-lear-primary] font-semibold hover:text-[--color-lear-primary-light] transition-colors"
+          class="inline-flex items-center gap-2 text-[--color-lear-primary] font-bold text-lg hover:text-[--color-lear-primary-light] transition-colors group"
         >
-          Ver todos los servicios →
+          Ver todos los servicios
+          <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+          </svg>
         </a>
       </div>
     </div>
   </section>
 
   <!-- Team Preview -->
-  <section class="py-20 bg-[--color-lear-gray-50]">
+  <section class="py-20 bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-16">
-        <h2 class="text-3xl md:text-4xl font-bold text-[--color-lear-gray-900] mb-4">
-          Nuestro Equipo
+        <span class="inline-block px-4 py-2 bg-[--color-lear-accent]/10 text-[--color-lear-primary] rounded-full font-semibold text-sm mb-4">
+          NUESTRO EQUIPO
+        </span>
+        <h2 class="text-4xl md:text-5xl font-bold text-[--color-lear-gray-900] mb-4">
+          Profesionales de Excelencia
         </h2>
-        <p class="text-lg text-[--color-lear-gray-600] max-w-2xl mx-auto">
-          Profesionales dedicados a tu salud y bienestar
+        <p class="text-xl text-[--color-lear-gray-600] max-w-2xl mx-auto">
+          Expertos dedicados a tu salud y bienestar con formación certificada
         </p>
       </div>
 
-      <div class="text-center">
+      <div class="flex justify-center">
         <a
           href="/equipo"
-          class="inline-block bg-[--color-lear-primary] text-white px-8 py-3 rounded-lg font-semibold hover:bg-[--color-lear-primary-light] transition-colors shadow-md"
+          class="group inline-flex items-center gap-3 bg-gradient-to-r from-[--color-lear-primary] to-[--color-lear-primary-light] text-white px-10 py-5 rounded-xl font-bold text-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
         >
           Conoce a Nuestro Equipo
+          <svg class="w-6 h-6 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+          </svg>
         </a>
       </div>
     </div>
   </section>
 
   <!-- CTA Section -->
-  <section class="py-20 bg-[--color-lear-primary] text-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h2 class="text-3xl md:text-4xl font-bold mb-6">
-        ¿Listo para comenzar tu recuperación?
+  <section class="relative py-24 bg-gradient-to-br from-[--color-lear-primary] via-[--color-lear-primary-dark] to-[--color-lear-primary] text-white overflow-hidden">
+    <!-- Decorative background -->
+    <div class="absolute inset-0 opacity-10">
+      <div class="absolute top-0 left-1/4 w-96 h-96 bg-[--color-lear-secondary] rounded-full blur-3xl"></div>
+      <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-[--color-lear-accent] rounded-full blur-3xl"></div>
+    </div>
+
+    <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-4xl md:text-5xl font-bold mb-6">
+        ¿Listo para comenzar tu <span class="text-[--color-lear-secondary-lighter]">recuperación</span>?
       </h2>
-      <p class="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+      <p class="text-xl md:text-2xl text-white/90 mb-10 max-w-2xl mx-auto leading-relaxed">
         Contáctanos hoy y da el primer paso hacia una mejor calidad de vida
       </p>
-      <div class="text-lg">
-        <p class="text-white/80">Información de contacto próximamente</p>
+      <div class="inline-flex flex-col sm:flex-row gap-4 bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
+        <div class="flex items-center gap-3 px-6 py-3 bg-white/20 rounded-xl">
+          <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+          </svg>
+          <span class="font-medium">Información de contacto próximamente</span>
+        </div>
       </div>
     </div>
   </section>

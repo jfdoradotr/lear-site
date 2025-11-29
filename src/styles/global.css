@@ -1,21 +1,40 @@
 @import "tailwindcss";
 
 @theme {
-  /* LEAR Brand Colors */
+  /* LEAR Brand Colors - Basados en el logo */
   --color-lear-primary: #0d4b92;
   --color-lear-primary-dark: #083863;
   --color-lear-primary-light: #1560b3;
+  --color-lear-primary-lighter: #3d7fc4;
 
   --color-lear-secondary: #00b6e5;
   --color-lear-secondary-dark: #0091b8;
   --color-lear-secondary-light: #33c7ed;
+  --color-lear-secondary-lighter: #66d4f1;
 
-  /* Grays for backgrounds and text */
-  --color-lear-gray-50: #f9fafb;
-  --color-lear-gray-100: #f3f4f6;
-  --color-lear-gray-200: #e5e7eb;
-  --color-lear-gray-600: #4b5563;
-  --color-lear-gray-700: #374151;
-  --color-lear-gray-800: #1f2937;
-  --color-lear-gray-900: #111827;
+  /* Colores de acento - Teoría del color (Complementario analógico) */
+  --color-lear-accent: #00d4aa; /* Verde agua - Confianza y salud */
+  --color-lear-accent-warm: #ff8c42; /* Naranja suave - Energía y vitalidad */
+
+  /* Backgrounds con tintes de marca */
+  --color-lear-bg-primary: #f0f6fc; /* Azul muy claro */
+  --color-lear-bg-secondary: #e6f7fd; /* Cyan muy claro */
+  --color-lear-bg-accent: #e6faf5; /* Verde agua muy claro */
+
+  /* Grays con tinte azul (más cohesivo con la marca) */
+  --color-lear-gray-50: #f8fafc;
+  --color-lear-gray-100: #f1f5f9;
+  --color-lear-gray-200: #e2e8f0;
+  --color-lear-gray-300: #cbd5e1;
+  --color-lear-gray-400: #94a3b8;
+  --color-lear-gray-500: #64748b;
+  --color-lear-gray-600: #475569;
+  --color-lear-gray-700: #334155;
+  --color-lear-gray-800: #1e293b;
+  --color-lear-gray-900: #0f172a;
+
+  /* Estados de feedback */
+  --color-lear-success: #00d4aa;
+  --color-lear-info: #00b6e5;
+  --color-lear-warning: #ff8c42;
 }
