@@ -1,16 +1,121 @@
 ---
-
+import Layout from '../layouts/Layout.astro';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout title="LEAR - Centro de Fisioterapia & Rehabilitación Integral">
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-br from-blue-600 to-cyan-500 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+      <div class="text-center">
+        <h1 class="text-4xl md:text-6xl font-bold mb-6">
+          Bienvenidos a LEAR
+        </h1>
+        <p class="text-xl md:text-2xl mb-8 text-blue-50">
+          Centro de Fisioterapia & Rehabilitación Integral
+        </p>
+        <p class="text-lg md:text-xl max-w-3xl mx-auto text-blue-100">
+          Tu bienestar es nuestra prioridad. Ofrecemos servicios profesionales de fisioterapia,
+          rehabilitación y entrenamiento personalizado.
+        </p>
+        <div class="mt-10">
+          <a
+            href="/servicios"
+            class="inline-block bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors shadow-lg"
+          >
+            Conoce Nuestros Servicios
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Preview -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          Nuestros Servicios
+        </h2>
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+          Ofrecemos una amplia gama de servicios especializados para tu recuperación y bienestar
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Service 1 -->
+        <div class="bg-gray-50 rounded-xl p-8 hover:shadow-lg transition-shadow">
+          <div class="text-blue-600 text-4xl mb-4">🩺</div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-3">Fisioterapia</h3>
+          <p class="text-gray-600">
+            Tratamientos profesionales de fisioterapia para tu recuperación y bienestar físico.
+          </p>
+        </div>
+
+        <!-- Service 2 -->
+        <div class="bg-gray-50 rounded-xl p-8 hover:shadow-lg transition-shadow">
+          <div class="text-blue-600 text-4xl mb-4">💪</div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-3">Rehabilitación</h3>
+          <p class="text-gray-600">
+            Programas integrales de rehabilitación adaptados a tus necesidades específicas.
+          </p>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="bg-gray-50 rounded-xl p-8 hover:shadow-lg transition-shadow">
+          <div class="text-blue-600 text-4xl mb-4">🏋️</div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-3">Entrenamiento Personalizado</h3>
+          <p class="text-gray-600">
+            Planes de entrenamiento diseñados exclusivamente para alcanzar tus objetivos.
+          </p>
+        </div>
+      </div>
+
+      <div class="text-center mt-12">
+        <a
+          href="/servicios"
+          class="inline-block text-blue-600 font-semibold hover:text-blue-700 transition-colors"
+        >
+          Ver todos los servicios →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team Preview -->
+  <section class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          Nuestro Equipo
+        </h2>
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+          Profesionales dedicados a tu salud y bienestar
+        </p>
+      </div>
+
+      <div class="text-center">
+        <a
+          href="/equipo"
+          class="inline-block bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+        >
+          Conoce a Nuestro Equipo
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-20 bg-blue-600 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6">
+        ¿Listo para comenzar tu recuperación?
+      </h2>
+      <p class="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+        Contáctanos hoy y da el primer paso hacia una mejor calidad de vida
+      </p>
+      <div class="text-lg">
+        <p class="text-blue-100">Información de contacto próximamente</p>
+      </div>
+    </div>
+  </section>
+</Layout>
