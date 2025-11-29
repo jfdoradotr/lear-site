@@ -4,100 +4,130 @@ import Layout from '../layouts/Layout.astro';
 
 <Layout title="Servicios - LEAR" description="Descubre nuestros servicios de fisioterapia, rehabilitación y entrenamiento personalizado">
   <!-- Page Header -->
-  <section class="bg-gradient-to-r from-[--color-lear-primary] to-[--color-lear-secondary] text-white py-16">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h1 class="text-4xl md:text-5xl font-bold mb-4">Nuestros Servicios</h1>
-      <p class="text-xl text-white/90">
-        Soluciones integrales para tu salud y bienestar
+  <section class="relative py-20 bg-gradient-to-br from-lear-primary via-lear-primary-light to-lear-secondary text-white overflow-hidden">
+    <div class="absolute inset-0 opacity-20">
+      <div class="absolute -top-20 -right-10 w-80 h-80 bg-lear-secondary rounded-full blur-3xl"></div>
+      <div class="absolute -bottom-24 -left-10 w-96 h-96 bg-lear-accent rounded-full blur-3xl"></div>
+    </div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="inline-flex items-center gap-2 px-6 py-3 bg-white/10 backdrop-blur-sm rounded-full font-semibold text-sm mb-6 border border-white/20">
+        <div class="w-2 h-2 bg-lear-secondary rounded-full animate-pulse"></div>
+        NUESTROS SERVICIOS
+      </div>
+      <h1 class="text-4xl md:text-6xl font-black mb-4">Soluciones para tu recuperación</h1>
+      <p class="text-xl md:text-2xl text-white/90 max-w-2xl">
+        Programas integrales de fisioterapia, rehabilitación y entrenamiento personalizados para ti.
       </p>
     </div>
   </section>
 
   <!-- Services Detail -->
-  <section class="py-20 bg-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <section class="relative py-24 overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-br from-lear-bg-primary via-white to-lear-bg-secondary"></div>
+    <div class="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-white/60 to-transparent"></div>
+    <div class="absolute bottom-0 right-0 w-[520px] h-[520px] bg-lear-secondary/10 rounded-full blur-3xl"></div>
+    <div class="absolute top-24 left-10 w-[420px] h-[420px] bg-lear-accent/10 rounded-full blur-3xl"></div>
+
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl md:text-5xl font-black text-lear-gray-900 mb-4">
+          Áreas de <span class="bg-gradient-to-r from-lear-primary via-lear-secondary to-lear-accent bg-clip-text text-transparent">especialización</span>
+        </h2>
+        <p class="text-lg md:text-xl text-lear-gray-600 max-w-3xl mx-auto">
+          Cada servicio está diseñado para acompañarte en una etapa específica de tu proceso de recuperación.
+        </p>
+      </div>
+
       <div class="space-y-20">
         <!-- Fisioterapia -->
         <div class="grid md:grid-cols-2 gap-12 items-center">
           <div>
-            <div class="inline-block p-3 bg-[--color-lear-primary]/10 rounded-lg mb-4">
+            <div class="inline-flex items-center gap-3 px-4 py-2 bg-lear-primary/10 rounded-full mb-4">
               <span class="text-5xl">🩺</span>
+              <span class="text-sm font-semibold text-lear-primary uppercase tracking-wide">Fisioterapia</span>
             </div>
-            <h2 class="text-3xl font-bold text-[--color-lear-gray-900] mb-4">Fisioterapia</h2>
-            <p class="text-lg text-[--color-lear-gray-600] mb-6">
+            <h2 class="text-3xl md:text-4xl font-black text-lear-gray-900 mb-4">Fisioterapia</h2>
+            <p class="text-lg text-lear-gray-600 mb-6 leading-relaxed">
               Nuestro equipo de fisioterapeutas certificados ofrece tratamientos especializados
               para diversas condiciones y lesiones.
             </p>
             <ul class="space-y-3">
               <li class="flex items-start">
-                <svg class="w-6 h-6 text-[--color-lear-secondary] mr-2 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg class="w-6 h-6 text-lear-secondary mr-2 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                 </svg>
-                <span class="text-[--color-lear-gray-700]">Evaluación y diagnóstico integral</span>
+                <span class="text-lear-gray-700">Evaluación y diagnóstico integral</span>
               </li>
               <li class="flex items-start">
-                <svg class="w-6 h-6 text-[--color-lear-secondary] mr-2 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg class="w-6 h-6 text-lear-secondary mr-2 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                 </svg>
-                <span class="text-[--color-lear-gray-700]">Tratamiento de lesiones deportivas</span>
+                <span class="text-lear-gray-700">Tratamiento de lesiones deportivas</span>
               </li>
               <li class="flex items-start">
-                <svg class="w-6 h-6 text-[--color-lear-secondary] mr-2 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg class="w-6 h-6 text-lear-secondary mr-2 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                 </svg>
-                <span class="text-[--color-lear-gray-700]">Terapia manual y manipulativa</span>
+                <span class="text-lear-gray-700">Terapia manual y manipulativa</span>
               </li>
               <li class="flex items-start">
-                <svg class="w-6 h-6 text-[--color-lear-secondary] mr-2 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg class="w-6 h-6 text-lear-secondary mr-2 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                 </svg>
-                <span class="text-[--color-lear-gray-700]">Fisioterapia neurológica</span>
+                <span class="text-lear-gray-700">Fisioterapia neurológica</span>
               </li>
             </ul>
           </div>
-          <div class="bg-gradient-to-br from-[--color-lear-primary]/10 to-[--color-lear-secondary]/10 rounded-2xl h-80 flex items-center justify-center">
-            <span class="text-[--color-lear-gray-400] text-sm">Imagen de fisioterapia</span>
+          <div class="relative">
+            <div class="absolute inset-0 bg-gradient-to-br from-lear-primary to-lear-primary-light rounded-3xl blur-xl opacity-40"></div>
+            <div class="relative bg-white/90 rounded-3xl border border-lear-primary/10 h-80 flex items-center justify-center shadow-2xl">
+              <span class="text-lear-gray-400 text-sm uppercase tracking-wide">Imagen de fisioterapia próximamente</span>
+            </div>
           </div>
         </div>
 
         <!-- Rehabilitación -->
         <div class="grid md:grid-cols-2 gap-12 items-center">
-          <div class="order-2 md:order-1 bg-gradient-to-br from-[--color-lear-secondary]/10 to-[--color-lear-primary]/10 rounded-2xl h-80 flex items-center justify-center">
-            <span class="text-[--color-lear-gray-400] text-sm">Imagen de rehabilitación</span>
+          <div class="order-2 md:order-1 relative">
+            <div class="absolute inset-0 bg-gradient-to-br from-lear-secondary to-lear-primary rounded-3xl blur-xl opacity-40"></div>
+            <div class="relative bg-white/90 rounded-3xl border border-lear-secondary/10 h-80 flex items-center justify-center shadow-2xl">
+              <span class="text-lear-gray-400 text-sm uppercase tracking-wide">Imagen de rehabilitación próximamente</span>
+            </div>
           </div>
           <div class="order-1 md:order-2">
-            <div class="inline-block p-3 bg-[--color-lear-primary]/10 rounded-lg mb-4">
+            <div class="inline-flex items-center gap-3 px-4 py-2 bg-lear-secondary/10 rounded-full mb-4">
               <span class="text-5xl">💪</span>
+              <span class="text-sm font-semibold text-lear-secondary uppercase tracking-wide">Rehabilitación</span>
             </div>
-            <h2 class="text-3xl font-bold text-[--color-lear-gray-900] mb-4">Rehabilitación Integral</h2>
-            <p class="text-lg text-[--color-lear-gray-600] mb-6">
+            <h2 class="text-3xl md:text-4xl font-black text-lear-gray-900 mb-4">Rehabilitación Integral</h2>
+            <p class="text-lg text-lear-gray-600 mb-6 leading-relaxed">
               Programas personalizados de rehabilitación diseñados para tu recuperación óptima
               y retorno a tus actividades diarias.
             </p>
             <ul class="space-y-3">
               <li class="flex items-start">
-                <svg class="w-6 h-6 text-[--color-lear-secondary] mr-2 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg class="w-6 h-6 text-lear-secondary mr-2 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                 </svg>
-                <span class="text-[--color-lear-gray-700]">Rehabilitación post-operatoria</span>
+                <span class="text-lear-gray-700">Rehabilitación post-operatoria</span>
               </li>
               <li class="flex items-start">
-                <svg class="w-6 h-6 text-[--color-lear-secondary] mr-2 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg class="w-6 h-6 text-lear-secondary mr-2 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                 </svg>
-                <span class="text-[--color-lear-gray-700]">Recuperación de lesiones musculares</span>
+                <span class="text-lear-gray-700">Recuperación de lesiones musculares</span>
               </li>
               <li class="flex items-start">
-                <svg class="w-6 h-6 text-[--color-lear-secondary] mr-2 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg class="w-6 h-6 text-lear-secondary mr-2 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                 </svg>
-                <span class="text-[--color-lear-gray-700]">Fortalecimiento progresivo</span>
+                <span class="text-lear-gray-700">Fortalecimiento progresivo</span>
               </li>
               <li class="flex items-start">
-                <svg class="w-6 h-6 text-[--color-lear-secondary] mr-2 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg class="w-6 h-6 text-lear-secondary mr-2 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                 </svg>
-                <span class="text-[--color-lear-gray-700]">Programas de prevención de lesiones</span>
+                <span class="text-lear-gray-700">Programas de prevención de lesiones</span>
               </li>
             </ul>
           </div>
@@ -106,43 +136,47 @@ import Layout from '../layouts/Layout.astro';
         <!-- Entrenamiento Personalizado -->
         <div class="grid md:grid-cols-2 gap-12 items-center">
           <div>
-            <div class="inline-block p-3 bg-[--color-lear-primary]/10 rounded-lg mb-4">
+            <div class="inline-flex items-center gap-3 px-4 py-2 bg-lear-accent/10 rounded-full mb-4">
               <span class="text-5xl">🏋️</span>
+              <span class="text-sm font-semibold text-lear-accent uppercase tracking-wide">Entrenamiento</span>
             </div>
-            <h2 class="text-3xl font-bold text-[--color-lear-gray-900] mb-4">Entrenamiento Personalizado</h2>
-            <p class="text-lg text-[--color-lear-gray-600] mb-6">
+            <h2 class="text-3xl md:text-4xl font-black text-lear-gray-900 mb-4">Entrenamiento Personalizado</h2>
+            <p class="text-lg text-lear-gray-600 mb-6 leading-relaxed">
               Programas de entrenamiento diseñados específicamente para tus objetivos,
               nivel de condición física y necesidades individuales.
             </p>
             <ul class="space-y-3">
               <li class="flex items-start">
-                <svg class="w-6 h-6 text-[--color-lear-secondary] mr-2 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg class="w-6 h-6 text-lear-secondary mr-2 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                 </svg>
-                <span class="text-[--color-lear-gray-700]">Evaluación física completa</span>
+                <span class="text-lear-gray-700">Evaluación física completa</span>
               </li>
               <li class="flex items-start">
-                <svg class="w-6 h-6 text-[--color-lear-secondary] mr-2 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg class="w-6 h-6 text-lear-secondary mr-2 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                 </svg>
-                <span class="text-[--color-lear-gray-700]">Planes de entrenamiento individualizados</span>
+                <span class="text-lear-gray-700">Planes de entrenamiento individualizados</span>
               </li>
               <li class="flex items-start">
-                <svg class="w-6 h-6 text-[--color-lear-secondary] mr-2 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg class="w-6 h-6 text-lear-secondary mr-2 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                 </svg>
-                <span class="text-[--color-lear-gray-700]">Seguimiento y ajuste continuo</span>
+                <span class="text-lear-gray-700">Seguimiento y ajuste continuo</span>
               </li>
               <li class="flex items-start">
-                <svg class="w-6 h-6 text-[--color-lear-secondary] mr-2 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg class="w-6 h-6 text-lear-secondary mr-2 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                 </svg>
-                <span class="text-[--color-lear-gray-700]">Asesoramiento nutricional básico</span>
+                <span class="text-lear-gray-700">Asesoramiento nutricional básico</span>
               </li>
             </ul>
           </div>
-          <div class="bg-gradient-to-br from-[--color-lear-primary]/10 to-[--color-lear-secondary]/10 rounded-2xl h-80 flex items-center justify-center">
-            <span class="text-[--color-lear-gray-400] text-sm">Imagen de entrenamiento</span>
+          <div class="relative">
+            <div class="absolute inset-0 bg-gradient-to-br from-lear-accent to-lear-secondary rounded-3xl blur-xl opacity-40"></div>
+            <div class="relative bg-white/90 rounded-3xl border border-lear-accent/10 h-80 flex items-center justify-center shadow-2xl">
+              <span class="text-lear-gray-400 text-sm uppercase tracking-wide">Imagen de entrenamiento próximamente</span>
+            </div>
           </div>
         </div>
       </div>
@@ -150,15 +184,26 @@ import Layout from '../layouts/Layout.astro';
   </section>
 
   <!-- CTA Section -->
-  <section class="py-16 bg-[--color-lear-gray-50]">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h2 class="text-3xl font-bold text-[--color-lear-gray-900] mb-4">
+  <section class="relative py-20 bg-gradient-to-br from-lear-primary via-lear-primary-dark to-lear-secondary text-white overflow-hidden">
+    <div class="absolute inset-0 opacity-20">
+      <div class="absolute top-0 left-1/4 w-80 h-80 bg-lear-secondary rounded-full blur-3xl"></div>
+      <div class="absolute bottom-0 right-1/4 w-80 h-80 bg-lear-accent rounded-full blur-3xl"></div>
+    </div>
+    <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl md:text-4xl font-black mb-4">
         ¿Interesado en nuestros servicios?
       </h2>
-      <p class="text-lg text-[--color-lear-gray-600] mb-8">
-        Contáctanos para más información sobre cómo podemos ayudarte
+      <p class="text-lg md:text-2xl text-white/90 mb-8">
+        Muy pronto podrás contactarnos directamente para encontrar el plan ideal para ti.
       </p>
-      <p class="text-[--color-lear-primary] font-medium">Información de contacto próximamente</p>
+      <div class="inline-flex flex-col sm:flex-row gap-4 bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
+        <div class="flex items-center gap-3 px-6 py-3 bg-white/20 rounded-xl">
+          <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+          </svg>
+          <span class="font-medium">Información de contacto próximamente</span>
+        </div>
+      </div>
     </div>
   </section>
 </Layout>

@@ -4,11 +4,19 @@ import Layout from '../layouts/Layout.astro';
 
 <Layout title="Sobre Nosotros - LEAR" description="Conoce más sobre LEAR, nuestros valores y misión">
   <!-- Page Header -->
-  <section class="bg-gradient-to-r from-[--color-lear-primary] to-[--color-lear-secondary] text-white py-16">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h1 class="text-4xl md:text-5xl font-bold mb-4">Sobre Nosotros</h1>
-      <p class="text-xl text-white/90">
-        Conoce nuestra historia, misión y valores
+  <section class="relative py-20 bg-gradient-to-br from-lear-primary via-lear-primary-light to-lear-secondary text-white overflow-hidden">
+    <div class="absolute inset-0 opacity-20">
+      <div class="absolute -top-20 -right-10 w-80 h-80 bg-lear-secondary rounded-full blur-3xl"></div>
+      <div class="absolute -bottom-24 -left-10 w-96 h-96 bg-lear-accent rounded-full blur-3xl"></div>
+    </div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="inline-flex items-center gap-2 px-6 py-3 bg-white/10 backdrop-blur-sm rounded-full font-semibold text-sm mb-6 border border-white/20">
+        <div class="w-2 h-2 bg-lear-secondary rounded-full animate-pulse"></div>
+        SOBRE NOSOTROS
+      </div>
+      <h1 class="text-4xl md:text-6xl font-black mb-4">Nuestra historia y propósito</h1>
+      <p class="text-xl md:text-2xl text-white/90 max-w-2xl">
+        Conoce el camino que nos trajo hasta aquí y lo que nos impulsa cada día.
       </p>
     </div>
   </section>
@@ -16,15 +24,15 @@ import Layout from '../layouts/Layout.astro';
   <!-- About Content -->
   <section class="py-20 bg-white">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="prose prose-lg max-w-none">
-        <h2 class="text-3xl font-bold text-[--color-lear-gray-900] mb-6">Nuestra Historia</h2>
-        <p class="text-[--color-lear-gray-600] mb-6">
+      <div class="max-w-none">
+        <h2 class="text-3xl md:text-4xl font-black text-lear-gray-900 mb-6">Nuestra Historia</h2>
+        <p class="text-lear-gray-600 mb-6 leading-relaxed">
           LEAR nace con la visión de ofrecer servicios integrales de fisioterapia y rehabilitación
           de la más alta calidad. Antes conocidos como Fisio con Elena, hemos evolucionado para
           convertirnos en un centro integral que combina la experiencia profesional con un enfoque
           personalizado en cada tratamiento.
         </p>
-        <p class="text-[--color-lear-gray-600] mb-8">
+        <p class="text-lear-gray-600 mb-8 leading-relaxed">
           Nuestro compromiso es proporcionar a cada paciente las herramientas y el acompañamiento
           necesario para alcanzar sus objetivos de salud y bienestar, ya sea recuperándose de una
           lesión, mejorando su condición física o buscando prevenir futuras complicaciones.
@@ -34,18 +42,18 @@ import Layout from '../layouts/Layout.astro';
   </section>
 
   <!-- Mission & Vision -->
-  <section class="py-20 bg-[--color-lear-gray-50]">
+  <section class="py-20 bg-lear-bg-primary">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid md:grid-cols-2 gap-12">
         <!-- Mission -->
-        <div class="bg-white rounded-xl p-8 shadow-lg">
-          <div class="inline-block p-3 bg-[--color-lear-primary]/10 rounded-lg mb-4">
-            <svg class="w-8 h-8 text-[--color-lear-primary]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <div class="bg-white rounded-3xl p-8 shadow-xl border border-lear-gray-100">
+          <div class="inline-block p-3 bg-lear-primary/10 rounded-lg mb-4">
+            <svg class="w-8 h-8 text-lear-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
             </svg>
           </div>
-          <h2 class="text-2xl font-bold text-[--color-lear-gray-900] mb-4">Nuestra Misión</h2>
-          <p class="text-[--color-lear-gray-600]">
+          <h2 class="text-2xl font-bold text-lear-gray-900 mb-4">Nuestra Misión</h2>
+          <p class="text-lear-gray-600 leading-relaxed">
             Proporcionar servicios de fisioterapia y rehabilitación de excelencia, utilizando
             técnicas actualizadas y un enfoque personalizado que priorice el bienestar integral
             de cada paciente, ayudándoles a alcanzar sus objetivos de salud y calidad de vida.
@@ -53,15 +61,15 @@ import Layout from '../layouts/Layout.astro';
         </div>
 
         <!-- Vision -->
-        <div class="bg-white rounded-xl p-8 shadow-lg">
-          <div class="inline-block p-3 bg-[--color-lear-secondary]/10 rounded-lg mb-4">
-            <svg class="w-8 h-8 text-[--color-lear-secondary]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <div class="bg-white rounded-3xl p-8 shadow-xl border border-lear-gray-100">
+          <div class="inline-block p-3 bg-lear-secondary/10 rounded-lg mb-4">
+            <svg class="w-8 h-8 text-lear-secondary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
             </svg>
           </div>
-          <h2 class="text-2xl font-bold text-[--color-lear-gray-900] mb-4">Nuestra Visión</h2>
-          <p class="text-[--color-lear-gray-600]">
+          <h2 class="text-2xl font-bold text-lear-gray-900 mb-4">Nuestra Visión</h2>
+          <p class="text-lear-gray-600 leading-relaxed">
             Ser reconocidos como un centro de referencia en fisioterapia y rehabilitación integral,
             destacándonos por nuestro profesionalismo, innovación en tratamientos y el compromiso
             genuino con la recuperación y bienestar de nuestros pacientes.
@@ -75,64 +83,64 @@ import Layout from '../layouts/Layout.astro';
   <section class="py-20 bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-16">
-        <h2 class="text-3xl md:text-4xl font-bold text-[--color-lear-gray-900] mb-4">
+        <h2 class="text-3xl md:text-4xl font-bold text-lear-gray-900 mb-4">
           Nuestros Valores
         </h2>
-        <p class="text-lg text-[--color-lear-gray-600] max-w-2xl mx-auto">
-          Los principios que guían nuestro trabajo diario
+        <p class="text-lg text-lear-gray-600 max-w-2xl mx-auto">
+          Los principios que guían nuestro trabajo diario.
         </p>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         <!-- Value 1 -->
-        <div class="text-center">
-          <div class="inline-block p-4 bg-[--color-lear-primary]/10 rounded-full mb-4">
-            <svg class="w-8 h-8 text-[--color-lear-primary]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <div class="text-center bg-lear-bg-primary rounded-3xl p-8 shadow-md border border-lear-gray-100">
+          <div class="inline-block p-4 bg-lear-primary/10 rounded-full mb-4">
+            <svg class="w-8 h-8 text-lear-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
             </svg>
           </div>
-          <h3 class="text-xl font-semibold text-[--color-lear-gray-900] mb-2">Compromiso</h3>
-          <p class="text-[--color-lear-gray-600]">
-            Dedicación total a la recuperación y bienestar de nuestros pacientes
+          <h3 class="text-xl font-semibold text-lear-gray-900 mb-2">Compromiso</h3>
+          <p class="text-lear-gray-600">
+            Dedicación total a la recuperación y bienestar de nuestros pacientes.
           </p>
         </div>
 
         <!-- Value 2 -->
-        <div class="text-center">
-          <div class="inline-block p-4 bg-[--color-lear-primary]/10 rounded-full mb-4">
-            <svg class="w-8 h-8 text-[--color-lear-primary]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <div class="text-center bg-lear-bg-primary rounded-3xl p-8 shadow-md border border-lear-gray-100">
+          <div class="inline-block p-4 bg-lear-primary/10 rounded-full mb-4">
+            <svg class="w-8 h-8 text-lear-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
             </svg>
           </div>
-          <h3 class="text-xl font-semibold text-[--color-lear-gray-900] mb-2">Profesionalismo</h3>
-          <p class="text-[--color-lear-gray-600]">
-            Excelencia en cada tratamiento y atención brindada
+          <h3 class="text-xl font-semibold text-lear-gray-900 mb-2">Profesionalismo</h3>
+          <p class="text-lear-gray-600">
+            Excelencia en cada tratamiento y atención brindada.
           </p>
         </div>
 
         <!-- Value 3 -->
-        <div class="text-center">
-          <div class="inline-block p-4 bg-[--color-lear-primary]/10 rounded-full mb-4">
-            <svg class="w-8 h-8 text-[--color-lear-primary]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <div class="text-center bg-lear-bg-primary rounded-3xl p-8 shadow-md border border-lear-gray-100">
+          <div class="inline-block p-4 bg-lear-primary/10 rounded-full mb-4">
+            <svg class="w-8 h-8 text-lear-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
             </svg>
           </div>
-          <h3 class="text-xl font-semibold text-[--color-lear-gray-900] mb-2">Personalización</h3>
-          <p class="text-[--color-lear-gray-600]">
-            Tratamientos adaptados a las necesidades únicas de cada persona
+          <h3 class="text-xl font-semibold text-lear-gray-900 mb-2">Personalización</h3>
+          <p class="text-lear-gray-600">
+            Tratamientos adaptados a las necesidades únicas de cada persona.
           </p>
         </div>
 
         <!-- Value 4 -->
-        <div class="text-center">
-          <div class="inline-block p-4 bg-[--color-lear-primary]/10 rounded-full mb-4">
-            <svg class="w-8 h-8 text-[--color-lear-primary]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <div class="text-center bg-lear-bg-primary rounded-3xl p-8 shadow-md border border-lear-gray-100">
+          <div class="inline-block p-4 bg-lear-primary/10 rounded-full mb-4">
+            <svg class="w-8 h-8 text-lear-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
             </svg>
           </div>
-          <h3 class="text-xl font-semibold text-[--color-lear-gray-900] mb-2">Innovación</h3>
-          <p class="text-[--color-lear-gray-600]">
-            Actualización constante con las mejores prácticas y técnicas
+          <h3 class="text-xl font-semibold text-lear-gray-900 mb-2">Innovación</h3>
+          <p class="text-lear-gray-600">
+            Actualización constante con las mejores prácticas y técnicas.
           </p>
         </div>
       </div>
@@ -140,63 +148,63 @@ import Layout from '../layouts/Layout.astro';
   </section>
 
   <!-- What Makes Us Different -->
-  <section class="py-20 bg-gradient-to-br from-[--color-lear-primary]/5 to-[--color-lear-secondary]/5">
+  <section class="py-20 bg-gradient-to-br from-lear-bg-primary to-lear-bg-secondary">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-12">
-        <h2 class="text-3xl md:text-4xl font-bold text-[--color-lear-gray-900] mb-4">
+        <h2 class="text-3xl md:text-4xl font-bold text-lear-gray-900 mb-4">
           ¿Qué nos hace diferentes?
         </h2>
       </div>
 
       <div class="space-y-6">
-        <div class="bg-white rounded-lg p-6 shadow-md">
+        <div class="bg-white rounded-2xl p-6 shadow-md border border-lear-gray-100">
           <div class="flex items-start">
             <div class="flex-shrink-0">
-              <div class="p-2 bg-[--color-lear-primary]/10 rounded-lg">
-                <svg class="w-6 h-6 text-[--color-lear-primary]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <div class="p-2 bg-lear-primary/10 rounded-lg">
+                <svg class="w-6 h-6 text-lear-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                 </svg>
               </div>
             </div>
             <div class="ml-4">
-              <h3 class="text-lg font-semibold text-[--color-lear-gray-900] mb-2">Enfoque Integral</h3>
-              <p class="text-[--color-lear-gray-600]">
+              <h3 class="text-lg font-semibold text-lear-gray-900 mb-2">Enfoque Integral</h3>
+              <p class="text-lear-gray-600">
                 No solo tratamos síntomas, abordamos la causa raíz del problema para una recuperación completa y duradera.
               </p>
             </div>
           </div>
         </div>
 
-        <div class="bg-white rounded-lg p-6 shadow-md">
+        <div class="bg-white rounded-2xl p-6 shadow-md border border-lear-gray-100">
           <div class="flex items-start">
             <div class="flex-shrink-0">
-              <div class="p-2 bg-[--color-lear-primary]/10 rounded-lg">
-                <svg class="w-6 h-6 text-[--color-lear-primary]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <div class="p-2 bg-lear-primary/10 rounded-lg">
+                <svg class="w-6 h-6 text-lear-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                 </svg>
               </div>
             </div>
             <div class="ml-4">
-              <h3 class="text-lg font-semibold text-[--color-lear-gray-900] mb-2">Atención Personalizada</h3>
-              <p class="text-[--color-lear-gray-600]">
+              <h3 class="text-lg font-semibold text-lear-gray-900 mb-2">Atención Personalizada</h3>
+              <p class="text-lear-gray-600">
                 Cada paciente recibe un plan de tratamiento diseñado específicamente para sus necesidades y objetivos.
               </p>
             </div>
           </div>
         </div>
 
-        <div class="bg-white rounded-lg p-6 shadow-md">
+        <div class="bg-white rounded-2xl p-6 shadow-md border border-lear-gray-100">
           <div class="flex items-start">
             <div class="flex-shrink-0">
-              <div class="p-2 bg-[--color-lear-primary]/10 rounded-lg">
-                <svg class="w-6 h-6 text-[--color-lear-primary]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <div class="p-2 bg-lear-primary/10 rounded-lg">
+                <svg class="w-6 h-6 text-lear-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                 </svg>
               </div>
             </div>
             <div class="ml-4">
-              <h3 class="text-lg font-semibold text-[--color-lear-gray-900] mb-2">Equipo Multidisciplinario</h3>
-              <p class="text-[--color-lear-gray-600]">
+              <h3 class="text-lg font-semibold text-lear-gray-900 mb-2">Equipo Multidisciplinario</h3>
+              <p class="text-lear-gray-600">
                 Combinamos la experiencia de fisioterapeutas y entrenadores personales para un servicio completo.
               </p>
             </div>
@@ -207,15 +215,26 @@ import Layout from '../layouts/Layout.astro';
   </section>
 
   <!-- CTA Section -->
-  <section class="py-16 bg-[--color-lear-primary] text-white">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+  <section class="relative py-20 bg-gradient-to-br from-lear-primary via-lear-primary-dark to-lear-secondary text-white overflow-hidden">
+    <div class="absolute inset-0 opacity-20">
+      <div class="absolute top-0 left-1/4 w-80 h-80 bg-lear-secondary rounded-full blur-3xl"></div>
+      <div class="absolute bottom-0 right-1/4 w-80 h-80 bg-lear-accent rounded-full blur-3xl"></div>
+    </div>
+    <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
       <h2 class="text-3xl font-bold mb-4">
         ¿Quieres ser parte de nuestra historia de éxito?
       </h2>
       <p class="text-xl text-white/90 mb-8">
-        Contáctanos y comienza tu camino hacia una mejor salud
+        Muy pronto podrás contactarnos para comenzar tu camino hacia una mejor salud.
       </p>
-      <p class="text-lg font-medium">Información de contacto próximamente</p>
+      <div class="inline-flex flex-col sm:flex-row gap-4 bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
+        <div class="flex items-center gap-3 px-6 py-3 bg-white/20 rounded-xl">
+          <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+          </svg>
+          <span class="font-medium">Información de contacto próximamente</span>
+        </div>
+      </div>
     </div>
   </section>
 </Layout>
