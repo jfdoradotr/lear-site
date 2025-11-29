@@ -16,10 +16,11 @@
   --color-lear-accent: #00d4aa; /* Verde agua - Confianza y salud */
   --color-lear-accent-warm: #ff8c42; /* Naranja suave - Energía y vitalidad */
 
-  /* Backgrounds con tintes de marca */
-  --color-lear-bg-primary: #f0f6fc; /* Azul muy claro */
-  --color-lear-bg-secondary: #e6f7fd; /* Cyan muy claro */
-  --color-lear-bg-accent: #e6faf5; /* Verde agua muy claro */
+  /* Backgrounds con tintes de marca - MÁS SATURADOS */
+  --color-lear-bg-primary: #e3f0ff; /* Azul más visible */
+  --color-lear-bg-secondary: #d9f3fc; /* Cyan más visible */
+  --color-lear-bg-accent: #d6f5ed; /* Verde agua más visible */
+  --color-lear-bg-gradient: linear-gradient(135deg, #e3f0ff 0%, #d9f3fc 50%, #d6f5ed 100%);
 
   /* Grays con tinte azul (más cohesivo con la marca) */
   --color-lear-gray-50: #f8fafc;
