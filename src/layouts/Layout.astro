@@ -19,9 +19,9 @@ const { title, description = "LEAR - Centro de Fisioterapia & Rehabilitación In
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
-  <body class="min-h-screen flex flex-col bg-[--color-lear-bg-primary]">
+  <body class="min-h-screen flex flex-col bg-lear-bg-primary">
     <!-- Header / Navigation -->
-    <header class="bg-white/80 backdrop-blur-xl shadow-lg shadow-[--color-lear-primary]/5 sticky top-0 z-50 border-b border-[--color-lear-gray-200]">
+    <header class="bg-white/80 backdrop-blur-xl shadow-lg sticky top-0 z-50 border-b border-lear-gray-200">
       <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between items-center h-20">
           <!-- Logo -->
@@ -35,28 +35,28 @@ const { title, description = "LEAR - Centro de Fisioterapia & Rehabilitación In
 
           <!-- Desktop Navigation -->
           <div class="hidden md:flex space-x-2">
-            <a href="/" class="relative px-4 py-2 text-[--color-lear-gray-700] hover:text-[--color-lear-primary] transition-all font-semibold group">
+            <a href="/" class="relative px-4 py-2 text-lear-gray-700 hover:text-lear-primary transition-all font-semibold group">
               <span class="relative z-10">Inicio</span>
-              <div class="absolute inset-0 bg-gradient-to-r from-[--color-lear-primary]/10 to-[--color-lear-secondary]/10 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity"></div>
+              <div class="absolute inset-0 bg-gradient-to-r from-lear-primary/10 to-lear-secondary/10 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity"></div>
             </a>
-            <a href="/servicios" class="relative px-4 py-2 text-[--color-lear-gray-700] hover:text-[--color-lear-primary] transition-all font-semibold group">
+            <a href="/servicios" class="relative px-4 py-2 text-lear-gray-700 hover:text-lear-primary transition-all font-semibold group">
               <span class="relative z-10">Servicios</span>
-              <div class="absolute inset-0 bg-gradient-to-r from-[--color-lear-primary]/10 to-[--color-lear-secondary]/10 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity"></div>
+              <div class="absolute inset-0 bg-gradient-to-r from-lear-primary/10 to-lear-secondary/10 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity"></div>
             </a>
-            <a href="/equipo" class="relative px-4 py-2 text-[--color-lear-gray-700] hover:text-[--color-lear-primary] transition-all font-semibold group">
+            <a href="/equipo" class="relative px-4 py-2 text-lear-gray-700 hover:text-lear-primary transition-all font-semibold group">
               <span class="relative z-10">Equipo</span>
-              <div class="absolute inset-0 bg-gradient-to-r from-[--color-lear-primary]/10 to-[--color-lear-secondary]/10 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity"></div>
+              <div class="absolute inset-0 bg-gradient-to-r from-lear-primary/10 to-lear-secondary/10 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity"></div>
             </a>
-            <a href="/sobre-nosotros" class="relative px-4 py-2 text-[--color-lear-gray-700] hover:text-[--color-lear-primary] transition-all font-semibold group">
+            <a href="/sobre-nosotros" class="relative px-4 py-2 text-lear-gray-700 hover:text-lear-primary transition-all font-semibold group">
               <span class="relative z-10">Sobre Nosotros</span>
-              <div class="absolute inset-0 bg-gradient-to-r from-[--color-lear-primary]/10 to-[--color-lear-secondary]/10 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity"></div>
+              <div class="absolute inset-0 bg-gradient-to-r from-lear-primary/10 to-lear-secondary/10 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity"></div>
             </a>
           </div>
 
           <!-- Mobile menu button -->
           <button
             id="mobile-menu-button"
-            class="md:hidden p-2 rounded-md text-[--color-lear-gray-700] hover:text-[--color-lear-primary] hover:bg-[--color-lear-gray-100]"
+            class="md:hidden p-2 rounded-md text-lear-gray-700 hover:text-lear-primary hover:bg-lear-gray-100"
             aria-label="Abrir menú"
           >
             <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -68,16 +68,16 @@ const { title, description = "LEAR - Centro de Fisioterapia & Rehabilitación In
         <!-- Mobile Navigation -->
         <div id="mobile-menu" class="hidden md:hidden pb-4">
           <div class="flex flex-col space-y-3">
-            <a href="/" class="text-[--color-lear-gray-700] hover:text-[--color-lear-primary] transition-colors font-medium px-2 py-1">
+            <a href="/" class="text-lear-gray-700 hover:text-lear-primary transition-colors font-medium px-2 py-1">
               Inicio
             </a>
-            <a href="/servicios" class="text-[--color-lear-gray-700] hover:text-[--color-lear-primary] transition-colors font-medium px-2 py-1">
+            <a href="/servicios" class="text-lear-gray-700 hover:text-lear-primary transition-colors font-medium px-2 py-1">
               Servicios
             </a>
-            <a href="/equipo" class="text-[--color-lear-gray-700] hover:text-[--color-lear-primary] transition-colors font-medium px-2 py-1">
+            <a href="/equipo" class="text-lear-gray-700 hover:text-lear-primary transition-colors font-medium px-2 py-1">
               Equipo
             </a>
-            <a href="/sobre-nosotros" class="text-[--color-lear-gray-700] hover:text-[--color-lear-primary] transition-colors font-medium px-2 py-1">
+            <a href="/sobre-nosotros" class="text-lear-gray-700 hover:text-lear-primary transition-colors font-medium px-2 py-1">
               Sobre Nosotros
             </a>
           </div>
@@ -91,11 +91,11 @@ const { title, description = "LEAR - Centro de Fisioterapia & Rehabilitación In
     </main>
 
     <!-- Footer -->
-    <footer class="relative bg-gradient-to-br from-[--color-lear-primary-dark] via-[--color-lear-primary] to-[--color-lear-primary-dark] text-white mt-auto overflow-hidden">
+    <footer class="relative bg-gradient-to-br from-lear-primary-dark via-lear-primary to-lear-primary-dark text-white mt-auto overflow-hidden">
       <!-- Decorative elements -->
       <div class="absolute inset-0 opacity-5">
-        <div class="absolute -top-24 -right-24 w-96 h-96 bg-[--color-lear-secondary] rounded-full blur-3xl"></div>
-        <div class="absolute -bottom-24 -left-24 w-96 h-96 bg-[--color-lear-accent] rounded-full blur-3xl"></div>
+        <div class="absolute -top-24 -right-24 w-96 h-96 bg-lear-secondary rounded-full blur-3xl"></div>
+        <div class="absolute -bottom-24 -left-24 w-96 h-96 bg-lear-accent rounded-full blur-3xl"></div>
       </div>
 
       <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
@@ -103,7 +103,7 @@ const { title, description = "LEAR - Centro de Fisioterapia & Rehabilitación In
           <!-- About -->
           <div>
             <div class="flex items-center gap-3 mb-4">
-              <div class="w-12 h-12 bg-gradient-to-br from-[--color-lear-secondary] to-[--color-lear-accent] rounded-xl flex items-center justify-center shadow-lg">
+              <div class="w-12 h-12 bg-gradient-to-br from-lear-secondary to-lear-accent rounded-xl flex items-center justify-center shadow-lg">
                 <span class="text-2xl font-bold">L</span>
               </div>
               <h3 class="text-2xl font-bold">LEAR</h3>
@@ -116,12 +116,12 @@ const { title, description = "LEAR - Centro de Fisioterapia & Rehabilitación In
           <!-- Quick Links -->
           <div>
             <h3 class="text-lg font-bold mb-6 flex items-center gap-2">
-              <div class="w-1 h-6 bg-gradient-to-b from-[--color-lear-secondary] to-[--color-lear-accent] rounded-full"></div>
+              <div class="w-1 h-6 bg-gradient-to-b from-lear-secondary to-lear-accent rounded-full"></div>
               Enlaces Rápidos
             </h3>
             <ul class="space-y-3">
               <li>
-                <a href="/servicios" class="group inline-flex items-center gap-2 text-white/80 hover:text-[--color-lear-secondary-light] transition-all">
+                <a href="/servicios" class="group inline-flex items-center gap-2 text-white/80 hover:text-lear-secondary-light transition-all">
                   <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
                   </svg>
@@ -129,7 +129,7 @@ const { title, description = "LEAR - Centro de Fisioterapia & Rehabilitación In
                 </a>
               </li>
               <li>
-                <a href="/equipo" class="group inline-flex items-center gap-2 text-white/80 hover:text-[--color-lear-secondary-light] transition-all">
+                <a href="/equipo" class="group inline-flex items-center gap-2 text-white/80 hover:text-lear-secondary-light transition-all">
                   <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
                   </svg>
@@ -137,7 +137,7 @@ const { title, description = "LEAR - Centro de Fisioterapia & Rehabilitación In
                 </a>
               </li>
               <li>
-                <a href="/sobre-nosotros" class="group inline-flex items-center gap-2 text-white/80 hover:text-[--color-lear-secondary-light] transition-all">
+                <a href="/sobre-nosotros" class="group inline-flex items-center gap-2 text-white/80 hover:text-lear-secondary-light transition-all">
                   <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
                   </svg>
@@ -150,7 +150,7 @@ const { title, description = "LEAR - Centro de Fisioterapia & Rehabilitación In
           <!-- Contact -->
           <div>
             <h3 class="text-lg font-bold mb-6 flex items-center gap-2">
-              <div class="w-1 h-6 bg-gradient-to-b from-[--color-lear-secondary] to-[--color-lear-accent] rounded-full"></div>
+              <div class="w-1 h-6 bg-gradient-to-b from-lear-secondary to-lear-accent rounded-full"></div>
               Contacto
             </h3>
             <div class="space-y-3">
