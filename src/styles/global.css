@@ -1,1 +1,21 @@
 @import "tailwindcss";
+
+@theme {
+  /* LEAR Brand Colors */
+  --color-lear-primary: #0d4b92;
+  --color-lear-primary-dark: #083863;
+  --color-lear-primary-light: #1560b3;
+
+  --color-lear-secondary: #00b6e5;
+  --color-lear-secondary-dark: #0091b8;
+  --color-lear-secondary-light: #33c7ed;
+
+  /* Grays for backgrounds and text */
+  --color-lear-gray-50: #f9fafb;
+  --color-lear-gray-100: #f3f4f6;
+  --color-lear-gray-200: #e5e7eb;
+  --color-lear-gray-600: #4b5563;
+  --color-lear-gray-700: #374151;
+  --color-lear-gray-800: #1f2937;
+  --color-lear-gray-900: #111827;
+}
