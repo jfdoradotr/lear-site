@@ -21,6 +21,171 @@ import Layout from '../layouts/Layout.astro';
     </div>
   </section>
 
+  <!-- How It Works Section -->
+  <section id="como-funciona" class="relative py-24 bg-white overflow-hidden scroll-mt-24">
+    <div class="absolute inset-0 bg-gradient-to-br from-lear-bg-primary via-white to-lear-bg-secondary"></div>
+    <div class="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-white/60 to-transparent"></div>
+    
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <div class="inline-flex items-center gap-2 px-6 py-3 bg-lear-primary/10 backdrop-blur-sm rounded-full font-semibold text-sm mb-6 border border-lear-primary/20">
+          <div class="w-2 h-2 bg-lear-primary rounded-full animate-pulse"></div>
+          NUESTRO PROCESO
+        </div>
+        <h2 class="text-4xl md:text-5xl font-black text-lear-gray-900 mb-4">
+          ¿Cómo <span class="bg-gradient-to-r from-lear-primary via-lear-secondary to-lear-accent bg-clip-text text-transparent">funcionamos</span>?
+        </h2>
+        <p class="text-lg md:text-xl text-lear-gray-600 max-w-3xl mx-auto">
+          Un proceso estructurado y personalizado diseñado para tu recuperación completa
+        </p>
+      </div>
+
+      <!-- Process Steps -->
+      <div class="max-w-5xl mx-auto">
+        <!-- Step 1: Valoración -->
+        <div class="relative mb-12">
+          <!-- Connector Line -->
+          <div class="absolute left-8 top-20 bottom-0 w-0.5 bg-gradient-to-b from-lear-primary via-lear-secondary to-lear-accent hidden md:block"></div>
+          
+          <div class="relative flex flex-col md:flex-row gap-8 items-start">
+            <!-- Step Number & Icon -->
+            <div class="relative flex-shrink-0">
+              <div class="w-16 h-16 bg-gradient-to-br from-lear-primary to-lear-secondary rounded-2xl flex items-center justify-center shadow-xl transform hover:scale-110 transition-transform">
+                <span class="text-2xl font-black text-white">1</span>
+              </div>
+            </div>
+            
+            <!-- Content -->
+            <div class="flex-1 bg-white rounded-3xl p-8 shadow-xl border border-lear-primary/10 hover:shadow-2xl transition-shadow">
+              <div class="flex items-center gap-3 mb-4">
+                <img src="/images/panda/panda-fisioterapia.png" alt="Panda Valoración" class="w-10 h-10 object-contain" />
+                <h3 class="text-2xl font-black text-lear-gray-900">Valoración Inicial</h3>
+              </div>
+              <div class="flex items-center gap-2 mb-4 text-lear-primary font-semibold">
+                <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <span>Duración aproximada: 90 minutos</span>
+              </div>
+              <p class="text-lear-gray-700 leading-relaxed mb-4">
+                La valoración inicial es el primer paso fundamental en tu proceso de recuperación. Durante esta sesión de aproximadamente 90 minutos, realizamos un <strong class="text-lear-gray-900">análisis completo y exhaustivo</strong> de tu condición física, historial médico y necesidades específicas.
+              </p>
+              <div class="bg-lear-primary/5 rounded-xl p-4 border-l-4 border-lear-primary">
+                <p class="text-lear-gray-700 text-sm">
+                  <strong class="text-lear-primary">Incluye:</strong> Además del análisis completo, recibirás un <strong>pequeño tratamiento inicial</strong> para que puedas experimentar de primera mano cómo trabajamos y qué esperar en las sesiones siguientes.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 2: Plan Personalizado -->
+        <div class="relative mb-12">
+          <div class="relative flex flex-col md:flex-row gap-8 items-start">
+            <!-- Step Number & Icon -->
+            <div class="relative flex-shrink-0">
+              <div class="w-16 h-16 bg-gradient-to-br from-lear-secondary to-lear-accent rounded-2xl flex items-center justify-center shadow-xl transform hover:scale-110 transition-transform">
+                <span class="text-2xl font-black text-white">2</span>
+              </div>
+            </div>
+            
+            <!-- Content -->
+            <div class="flex-1 bg-white rounded-3xl p-8 shadow-xl border border-lear-secondary/10 hover:shadow-2xl transition-shadow">
+              <div class="flex items-center gap-3 mb-4">
+                <svg class="w-10 h-10 text-lear-secondary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+                <h3 class="text-2xl font-black text-lear-gray-900">Plan de Tratamiento Personalizado</h3>
+              </div>
+              <p class="text-lear-gray-700 leading-relaxed mb-4">
+                Basándonos en los resultados de tu valoración inicial, diseñamos un <strong class="text-lear-gray-900">plan de tratamiento completamente personalizado</strong> que puede incluir:
+              </p>
+              <div class="grid md:grid-cols-2 gap-4">
+                <div class="flex items-start gap-3 p-4 bg-lear-primary/5 rounded-xl">
+                  <svg class="w-6 h-6 text-lear-primary flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <div>
+                    <p class="font-semibold text-lear-gray-900 mb-1">Terapias de Fisioterapia</p>
+                    <p class="text-sm text-lear-gray-600">Sesiones específicas según tus necesidades</p>
+                  </div>
+                </div>
+                <div class="flex items-start gap-3 p-4 bg-lear-secondary/5 rounded-xl">
+                  <svg class="w-6 h-6 text-lear-secondary flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <div>
+                    <p class="font-semibold text-lear-gray-900 mb-1">Programas de Rehabilitación</p>
+                    <p class="text-sm text-lear-gray-600">Si tu caso lo requiere</p>
+                  </div>
+                </div>
+                <div class="flex items-start gap-3 p-4 bg-lear-accent/5 rounded-xl">
+                  <svg class="w-6 h-6 text-lear-accent flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <div>
+                    <p class="font-semibold text-lear-gray-900 mb-1">Entrenamiento Personalizado</p>
+                    <p class="text-sm text-lear-gray-600">Para complementar tu recuperación</p>
+                  </div>
+                </div>
+                <div class="flex items-start gap-3 p-4 bg-lear-primary/5 rounded-xl">
+                  <svg class="w-6 h-6 text-lear-primary flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                  </svg>
+                  <div>
+                    <p class="font-semibold text-lear-gray-900 mb-1">Informes Detallados</p>
+                    <p class="text-sm text-lear-gray-600">Documentación completa de tu proceso</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 3: Objetivo Final -->
+        <div class="relative">
+          <div class="relative flex flex-col md:flex-row gap-8 items-start">
+            <!-- Step Number & Icon -->
+            <div class="relative flex-shrink-0">
+              <div class="w-16 h-16 bg-gradient-to-br from-lear-accent to-lear-primary rounded-2xl flex items-center justify-center shadow-xl transform hover:scale-110 transition-transform">
+                <svg class="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+              </div>
+            </div>
+            
+            <!-- Content -->
+            <div class="flex-1 bg-gradient-to-br from-lear-primary/5 via-lear-secondary/5 to-lear-accent/5 rounded-3xl p-8 shadow-xl border-2 border-lear-primary/20 hover:shadow-2xl transition-shadow">
+              <h3 class="text-2xl font-black text-lear-gray-900 mb-4">Nuestro Objetivo</h3>
+              <p class="text-lg text-lear-gray-700 leading-relaxed font-medium">
+                Lo que nos interesa es que puedas <strong class="text-lear-primary">volver a tu rutina diaria</strong> o incluso <strong class="text-lear-secondary">mejorarla</strong>. Cada paso de tu tratamiento está diseñado para ayudarte a alcanzar tu máximo potencial y mantener una calidad de vida óptima.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Informes Section -->
+      <div class="mt-16 bg-gradient-to-r from-lear-primary/10 via-lear-secondary/10 to-lear-accent/10 rounded-3xl p-8 border border-lear-primary/20">
+        <div class="flex flex-col md:flex-row gap-6 items-start md:items-center">
+          <div class="flex-shrink-0">
+            <div class="w-16 h-16 bg-lear-primary rounded-2xl flex items-center justify-center">
+              <svg class="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              </svg>
+            </div>
+          </div>
+          <div class="flex-1">
+            <h3 class="text-xl font-black text-lear-gray-900 mb-2">Informes y Documentación</h3>
+            <p class="text-lear-gray-700 leading-relaxed">
+              Mantenemos un registro completo y detallado de tu proceso de recuperación. Si necesitas informes médicos o documentación para tu seguimiento, podemos proporcionártelos. Estos informes incluyen evaluaciones, planes de tratamiento y progreso documentado.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Services Detail -->
   <section class="relative py-24 overflow-hidden">
     <div class="absolute inset-0 bg-gradient-to-br from-lear-bg-primary via-white to-lear-bg-secondary"></div>
