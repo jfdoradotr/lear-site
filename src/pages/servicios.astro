@@ -306,8 +306,13 @@ import Layout from '../layouts/Layout.astro';
           </div>
           <div class="relative">
             <div class="absolute inset-0 bg-gradient-to-br from-lear-primary to-lear-primary-light rounded-3xl blur-xl opacity-40"></div>
-            <div class="relative bg-white/90 rounded-3xl border border-lear-primary/10 h-80 flex items-center justify-center shadow-2xl">
-              <span class="text-lear-gray-400 text-sm uppercase tracking-wide">Imagen de fisioterapia próximamente</span>
+            <div class="relative bg-white/90 rounded-3xl border border-lear-primary/10 h-80 overflow-hidden shadow-2xl">
+              <img 
+                src="/images/servicios/kinesio_espalda.jpg" 
+                alt="Tratamiento de fisioterapia con kinesiotape" 
+                class="w-full h-full object-cover"
+                loading="lazy"
+              />
             </div>
           </div>
         </div>
@@ -316,8 +321,13 @@ import Layout from '../layouts/Layout.astro';
         <div id="rehabilitacion" class="grid md:grid-cols-2 gap-12 items-center scroll-mt-24">
           <div class="order-2 md:order-1 relative">
             <div class="absolute inset-0 bg-gradient-to-br from-lear-secondary to-lear-primary rounded-3xl blur-xl opacity-40"></div>
-            <div class="relative bg-white/90 rounded-3xl border border-lear-secondary/10 h-80 flex items-center justify-center shadow-2xl">
-              <span class="text-lear-gray-400 text-sm uppercase tracking-wide">Imagen de rehabilitación próximamente</span>
+            <div class="relative bg-white/90 rounded-3xl border border-lear-secondary/10 h-80 overflow-hidden shadow-2xl">
+              <img 
+                src="/images/servicios/rehabilitacion_parafina.jpg" 
+                alt="Tratamiento de rehabilitación con parafina" 
+                class="w-full h-full object-cover"
+                loading="lazy"
+              />
             </div>
           </div>
           <div class="order-1 md:order-2">
@@ -407,8 +417,13 @@ import Layout from '../layouts/Layout.astro';
           </div>
           <div class="relative">
             <div class="absolute inset-0 bg-gradient-to-br from-lear-accent to-lear-secondary rounded-3xl blur-xl opacity-40"></div>
-            <div class="relative bg-white/90 rounded-3xl border border-lear-accent/10 h-80 flex items-center justify-center shadow-2xl">
-              <span class="text-lear-gray-400 text-sm uppercase tracking-wide">Imagen de entrenamiento próximamente</span>
+            <div class="relative bg-white/90 rounded-3xl border border-lear-accent/10 h-80 overflow-hidden shadow-2xl">
+              <img 
+                src="/images/servicios/ejercicio.jpg" 
+                alt="Entrenamiento personalizado" 
+                class="w-full h-full object-cover"
+                loading="lazy"
+              />
             </div>
           </div>
         </div>
