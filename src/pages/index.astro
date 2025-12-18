@@ -293,6 +293,287 @@ import Layout from '../layouts/Layout.astro';
     </div>
   </section>
 
+  <!-- Testimonios Section -->
+  <section class="relative py-24 overflow-hidden">
+    <!-- Background -->
+    <div class="absolute inset-0 bg-gradient-to-br from-white via-[#e3f0ff] to-[#d9f3fc]"></div>
+    <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-[#0d4b92]/10 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-0 left-0 w-[400px] h-[400px] bg-[#00d4aa]/10 rounded-full blur-3xl"></div>
+
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
+      <div class="text-center">
+        <div class="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-[#0d4b92]/20 to-[#00d4aa]/20 backdrop-blur-sm rounded-full font-bold text-sm mb-6 border-2 border-[#0d4b92]/30 shadow-lg">
+          <div class="w-2 h-2 bg-[#0d4b92] rounded-full animate-pulse shadow-lg shadow-[#0d4b92]"></div>
+          LO QUE DICEN NUESTROS PACIENTES
+        </div>
+        <h2 class="text-5xl md:text-6xl font-black text-[#0f172a] mb-6">
+          Historias de <span class="bg-gradient-to-r from-[#0d4b92] via-[#00b6e5] to-[#00d4aa] bg-clip-text text-transparent">Éxito</span>
+        </h2>
+        <p class="text-xl md:text-2xl text-[#475569] max-w-3xl mx-auto leading-relaxed">
+          La satisfacción de nuestros pacientes es nuestro mayor logro
+        </p>
+      </div>
+    </div>
+
+    <!-- Carrusel Infinito -->
+    <div class="relative w-full overflow-hidden">
+      <div class="flex gap-6 animate-scroll">
+        <!-- Testimonio 1 -->
+        <div class="flex-shrink-0 w-[400px] bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-xl border-2 border-[#0d4b92]/10 hover:border-[#0d4b92]/30 transition-all duration-300">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-12 h-12 bg-gradient-to-br from-[#0d4b92] to-[#00b6e5] rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg">
+              MC
+            </div>
+            <div>
+              <h4 class="font-bold text-[#0f172a] text-lg">María Carmen R.</h4>
+              <p class="text-sm text-[#64748b]">Noviembre 2024</p>
+            </div>
+          </div>
+          <div class="mb-4">
+            <svg class="w-8 h-8 text-[#00b6e5]/30" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+            </svg>
+          </div>
+          <p class="text-[#334155] leading-relaxed text-base">
+            Llegué con dolor lumbar crónico que me impedía trabajar. Después de 3 meses de tratamiento con el equipo de LEAR, he recuperado mi calidad de vida. El trato es excepcional y los resultados increíbles.
+          </p>
+        </div>
+
+        <!-- Testimonio 2 -->
+        <div class="flex-shrink-0 w-[400px] bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-xl border-2 border-[#00b6e5]/10 hover:border-[#00b6e5]/30 transition-all duration-300">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-12 h-12 bg-gradient-to-br from-[#00b6e5] to-[#00d4aa] rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg">
+              JL
+            </div>
+            <div>
+              <h4 class="font-bold text-[#0f172a] text-lg">José Luis M.</h4>
+              <p class="text-sm text-[#64748b]">Octubre 2024</p>
+            </div>
+          </div>
+          <div class="mb-4">
+            <svg class="w-8 h-8 text-[#00d4aa]/30" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+            </svg>
+          </div>
+          <p class="text-[#334155] leading-relaxed text-base">
+            Tuve una lesión deportiva en el hombro y pensé que no volvería a entrenar. El programa de rehabilitación fue personalizado y profesional. Hoy estoy de vuelta en el gimnasio más fuerte que nunca.
+          </p>
+        </div>
+
+        <!-- Testimonio 3 -->
+        <div class="flex-shrink-0 w-[400px] bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-xl border-2 border-[#00d4aa]/10 hover:border-[#00d4aa]/30 transition-all duration-300">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-12 h-12 bg-gradient-to-br from-[#00d4aa] to-[#0d4b92] rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg">
+              AG
+            </div>
+            <div>
+              <h4 class="font-bold text-[#0f172a] text-lg">Ana Gabriela S.</h4>
+              <p class="text-sm text-[#64748b]">Diciembre 2024</p>
+            </div>
+          </div>
+          <div class="mb-4">
+            <svg class="w-8 h-8 text-[#0d4b92]/30" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+            </svg>
+          </div>
+          <p class="text-[#334155] leading-relaxed text-base">
+            La atención personalizada hace toda la diferencia. No es solo fisioterapia, es un acompañamiento integral. Las instalaciones son modernas y el equipo súper capacitado. 100% recomendable.
+          </p>
+        </div>
+
+        <!-- Testimonio 4 -->
+        <div class="flex-shrink-0 w-[400px] bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-xl border-2 border-[#0d4b92]/10 hover:border-[#0d4b92]/30 transition-all duration-300">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-12 h-12 bg-gradient-to-br from-[#0d4b92] to-[#00b6e5] rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg">
+              RP
+            </div>
+            <div>
+              <h4 class="font-bold text-[#0f172a] text-lg">Roberto P.</h4>
+              <p class="text-sm text-[#64748b]">Septiembre 2024</p>
+            </div>
+          </div>
+          <div class="mb-4">
+            <svg class="w-8 h-8 text-[#00b6e5]/30" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+            </svg>
+          </div>
+          <p class="text-[#334155] leading-relaxed text-base">
+            Después de una cirugía de rodilla necesitaba rehabilitación intensiva. El plan de trabajo fue excelente, con seguimiento constante. Recuperé movilidad mucho más rápido de lo esperado.
+          </p>
+        </div>
+
+        <!-- Testimonio 5 -->
+        <div class="flex-shrink-0 w-[400px] bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-xl border-2 border-[#00b6e5]/10 hover:border-[#00b6e5]/30 transition-all duration-300">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-12 h-12 bg-gradient-to-br from-[#00b6e5] to-[#00d4aa] rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg">
+              LC
+            </div>
+            <div>
+              <h4 class="font-bold text-[#0f172a] text-lg">Laura C.</h4>
+              <p class="text-sm text-[#64748b]">Agosto 2024</p>
+            </div>
+          </div>
+          <div class="mb-4">
+            <svg class="w-8 h-8 text-[#00d4aa]/30" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+            </svg>
+          </div>
+          <p class="text-[#334155] leading-relaxed text-base">
+            Mi experiencia con LEAR ha sido extraordinaria. Profesionalismo, empatía y resultados reales. El dolor cervical que tenía hace años ha desaparecido completamente. Gracias a todo el equipo.
+          </p>
+        </div>
+
+        <!-- Testimonio 6 -->
+        <div class="flex-shrink-0 w-[400px] bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-xl border-2 border-[#00d4aa]/10 hover:border-[#00d4aa]/30 transition-all duration-300">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-12 h-12 bg-gradient-to-br from-[#00d4aa] to-[#0d4b92] rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg">
+              DF
+            </div>
+            <div>
+              <h4 class="font-bold text-[#0f172a] text-lg">Daniel F.</h4>
+              <p class="text-sm text-[#64748b]">Julio 2024</p>
+            </div>
+          </div>
+          <div class="mb-4">
+            <svg class="w-8 h-8 text-[#0d4b92]/30" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+            </svg>
+          </div>
+          <p class="text-[#334155] leading-relaxed text-base">
+            Como corredor, las lesiones son frecuentes. LEAR no solo me ayudó a recuperarme, sino que me enseñó técnicas de prevención. El entrenamiento personalizado ha mejorado mi rendimiento notablemente.
+          </p>
+        </div>
+
+        <!-- Duplicamos los testimonios para el efecto infinito -->
+        <!-- Testimonio 1 (duplicado) -->
+        <div class="flex-shrink-0 w-[400px] bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-xl border-2 border-[#0d4b92]/10 hover:border-[#0d4b92]/30 transition-all duration-300">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-12 h-12 bg-gradient-to-br from-[#0d4b92] to-[#00b6e5] rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg">
+              MC
+            </div>
+            <div>
+              <h4 class="font-bold text-[#0f172a] text-lg">María Carmen R.</h4>
+              <p class="text-sm text-[#64748b]">Noviembre 2024</p>
+            </div>
+          </div>
+          <div class="mb-4">
+            <svg class="w-8 h-8 text-[#00b6e5]/30" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+            </svg>
+          </div>
+          <p class="text-[#334155] leading-relaxed text-base">
+            Llegué con dolor lumbar crónico que me impedía trabajar. Después de 3 meses de tratamiento con el equipo de LEAR, he recuperado mi calidad de vida. El trato es excepcional y los resultados increíbles.
+          </p>
+        </div>
+
+        <!-- Testimonio 2 (duplicado) -->
+        <div class="flex-shrink-0 w-[400px] bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-xl border-2 border-[#00b6e5]/10 hover:border-[#00b6e5]/30 transition-all duration-300">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-12 h-12 bg-gradient-to-br from-[#00b6e5] to-[#00d4aa] rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg">
+              JL
+            </div>
+            <div>
+              <h4 class="font-bold text-[#0f172a] text-lg">José Luis M.</h4>
+              <p class="text-sm text-[#64748b]">Octubre 2024</p>
+            </div>
+          </div>
+          <div class="mb-4">
+            <svg class="w-8 h-8 text-[#00d4aa]/30" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+            </svg>
+          </div>
+          <p class="text-[#334155] leading-relaxed text-base">
+            Tuve una lesión deportiva en el hombro y pensé que no volvería a entrenar. El programa de rehabilitación fue personalizado y profesional. Hoy estoy de vuelta en el gimnasio más fuerte que nunca.
+          </p>
+        </div>
+
+        <!-- Testimonio 3 (duplicado) -->
+        <div class="flex-shrink-0 w-[400px] bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-xl border-2 border-[#00d4aa]/10 hover:border-[#00d4aa]/30 transition-all duration-300">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-12 h-12 bg-gradient-to-br from-[#00d4aa] to-[#0d4b92] rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg">
+              AG
+            </div>
+            <div>
+              <h4 class="font-bold text-[#0f172a] text-lg">Ana Gabriela S.</h4>
+              <p class="text-sm text-[#64748b]">Diciembre 2024</p>
+            </div>
+          </div>
+          <div class="mb-4">
+            <svg class="w-8 h-8 text-[#0d4b92]/30" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+            </svg>
+          </div>
+          <p class="text-[#334155] leading-relaxed text-base">
+            La atención personalizada hace toda la diferencia. No es solo fisioterapia, es un acompañamiento integral. Las instalaciones son modernas y el equipo súper capacitado. 100% recomendable.
+          </p>
+        </div>
+
+        <!-- Testimonio 4 (duplicado) -->
+        <div class="flex-shrink-0 w-[400px] bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-xl border-2 border-[#0d4b92]/10 hover:border-[#0d4b92]/30 transition-all duration-300">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-12 h-12 bg-gradient-to-br from-[#0d4b92] to-[#00b6e5] rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg">
+              RP
+            </div>
+            <div>
+              <h4 class="font-bold text-[#0f172a] text-lg">Roberto P.</h4>
+              <p class="text-sm text-[#64748b]">Septiembre 2024</p>
+            </div>
+          </div>
+          <div class="mb-4">
+            <svg class="w-8 h-8 text-[#00b6e5]/30" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+            </svg>
+          </div>
+          <p class="text-[#334155] leading-relaxed text-base">
+            Después de una cirugía de rodilla necesitaba rehabilitación intensiva. El plan de trabajo fue excelente, con seguimiento constante. Recuperé movilidad mucho más rápido de lo esperado.
+          </p>
+        </div>
+
+        <!-- Testimonio 5 (duplicado) -->
+        <div class="flex-shrink-0 w-[400px] bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-xl border-2 border-[#00b6e5]/10 hover:border-[#00b6e5]/30 transition-all duration-300">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-12 h-12 bg-gradient-to-br from-[#00b6e5] to-[#00d4aa] rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg">
+              LC
+            </div>
+            <div>
+              <h4 class="font-bold text-[#0f172a] text-lg">Laura C.</h4>
+              <p class="text-sm text-[#64748b]">Agosto 2024</p>
+            </div>
+          </div>
+          <div class="mb-4">
+            <svg class="w-8 h-8 text-[#00d4aa]/30" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+            </svg>
+          </div>
+          <p class="text-[#334155] leading-relaxed text-base">
+            Mi experiencia con LEAR ha sido extraordinaria. Profesionalismo, empatía y resultados reales. El dolor cervical que tenía hace años ha desaparecido completamente. Gracias a todo el equipo.
+          </p>
+        </div>
+
+        <!-- Testimonio 6 (duplicado) -->
+        <div class="flex-shrink-0 w-[400px] bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-xl border-2 border-[#00d4aa]/10 hover:border-[#00d4aa]/30 transition-all duration-300">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-12 h-12 bg-gradient-to-br from-[#00d4aa] to-[#0d4b92] rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg">
+              DF
+            </div>
+            <div>
+              <h4 class="font-bold text-[#0f172a] text-lg">Daniel F.</h4>
+              <p class="text-sm text-[#64748b]">Julio 2024</p>
+            </div>
+          </div>
+          <div class="mb-4">
+            <svg class="w-8 h-8 text-[#0d4b92]/30" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+            </svg>
+          </div>
+          <p class="text-[#334155] leading-relaxed text-base">
+            Como corredor, las lesiones son frecuentes. LEAR no solo me ayudó a recuperarme, sino que me enseñó técnicas de prevención. El entrenamiento personalizado ha mejorado mi rendimiento notablemente.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Team Preview -->
   <section class="relative py-24 overflow-hidden">
     <!-- Decorative Background - MÁS COLOR -->
