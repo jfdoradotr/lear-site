@@ -51,9 +51,20 @@
 }
 
 .animate-scroll {
-  animation: scroll 55s linear infinite;
+  animation: scroll 30s linear infinite;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .animate-scroll:hover {
+  animation-play-state: paused;
+}
+
+.animate-scroll.dragging {
+  animation-play-state: paused;
+  cursor: grabbing;
+  user-select: none;
+}
+
+.animate-scroll.paused {
   animation-play-state: paused;
 }
