@@ -366,6 +366,300 @@ const regularTestimonials = testimonials.filter(t => !t.featured);
         {regularTestimonials.map((testimonial, index) => (
           <TestimonialCard testimonial={testimonial} index={index} />
         ))}
+        <!-- ELIMINAR_HASTA_AQUI -->
+        <div class="flex-shrink-0 w-[calc(100vw-3rem)] md:w-[450px] bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-xl border-2 border-[#0d4b92]/10 hover:border-[#0d4b92]/30 transition-all duration-300">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-12 h-12 bg-gradient-to-br from-[#0d4b92] to-[#00b6e5] rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg">
+              LB
+            </div>
+            <div>
+              <h4 class="font-bold text-[#0f172a] text-lg">Lupita B.</h4>
+              <p class="text-sm text-[#64748b]">Octubre 2023</p>
+            </div>
+          </div>
+          <div class="mb-4">
+            <svg class="w-8 h-8 text-[#0d4b92]/30" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+            </svg>
+          </div>
+          <p class="text-[#334155] leading-relaxed text-base">
+            Excelente servicio, atención y buena charla, sin restarle lo profesional que es. Yo llegué con un dolor fuerte en mi rodilla izquierda y bien hinchada y gracias a Elena ya estoy muy bien... Se la súper recomiendo 10/10.
+          </p>
+        </div>
+
+        <!-- Testimonio 2 - Ana S. -->
+        <div class="flex-shrink-0 w-[calc(100vw-3rem)] md:w-[450px] bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-xl border-2 border-[#00b6e5]/10 hover:border-[#00b6e5]/30 transition-all duration-300">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-12 h-12 bg-gradient-to-br from-[#00b6e5] to-[#00d4aa] rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg">
+              AS
+            </div>
+            <div>
+              <h4 class="font-bold text-[#0f172a] text-lg">Ana S.</h4>
+              <p class="text-sm text-[#64748b]">Noviembre 2025</p>
+            </div>
+          </div>
+          <div class="mb-4">
+            <svg class="w-8 h-8 text-[#00b6e5]/30" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+            </svg>
+          </div>
+          <p class="text-[#334155] leading-relaxed text-base">
+            Gracias Elena!! Quedamos campeonas en dobles y no me dolió nadita 😘
+          </p>
+        </div>
+
+        <!-- Testimonio 3 - Luis M. -->
+        <div class="flex-shrink-0 w-[calc(100vw-3rem)] md:w-[450px] bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-xl border-2 border-[#00d4aa]/10 hover:border-[#00d4aa]/30 transition-all duration-300">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-12 h-12 bg-gradient-to-br from-[#00d4aa] to-[#0d4b92] rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg">
+              LM
+            </div>
+            <div>
+              <h4 class="font-bold text-[#0f172a] text-lg">Luis M.</h4>
+              <p class="text-sm text-[#64748b]">Diciembre 2025</p>
+            </div>
+          </div>
+          <div class="mb-4">
+            <svg class="w-8 h-8 text-[#00d4aa]/30" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+            </svg>
+          </div>
+          <p class="text-[#334155] leading-relaxed text-base">
+            Sí, estoy un poco más inflamado pero porque jugué ayer, recuerdo que algo así me habías comentado que podía pasar. Pero me siento mucho mejor, con más rango de movimiento.
+          </p>
+        </div>
+
+        <!-- Testimonio 4 - Juanita M. -->
+        <div class="flex-shrink-0 w-[calc(100vw-3rem)] md:w-[450px] bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-xl border-2 border-[#0d4b92]/10 hover:border-[#0d4b92]/30 transition-all duration-300">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-12 h-12 bg-gradient-to-br from-[#0d4b92] to-[#00b6e5] rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg">
+              JM
+            </div>
+            <div>
+              <h4 class="font-bold text-[#0f172a] text-lg">Juanita M.</h4>
+              <p class="text-sm text-[#64748b]">Noviembre 2025</p>
+            </div>
+          </div>
+          <div class="mb-4">
+            <svg class="w-8 h-8 text-[#0d4b92]/30" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+            </svg>
+          </div>
+          <p class="text-[#334155] leading-relaxed text-base">
+            Mi mamá está FASCINADA contigo 🥰 Llegó muy feliz y caminando sin su bastón 🥹😍 Dice: tu amiga tiene unas manos uff, ¡mágicas! Está súper feliz y encantada de ver resultados y, más que verlos, sentirlos.
+          </p>
+        </div>
+
+        <!-- Testimonio 5 - Myriam O. -->
+        <div class="flex-shrink-0 w-[calc(100vw-3rem)] md:w-[450px] bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-xl border-2 border-[#00b6e5]/10 hover:border-[#00b6e5]/30 transition-all duration-300">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-12 h-12 bg-gradient-to-br from-[#00b6e5] to-[#00d4aa] rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg">
+              MO
+            </div>
+            <div>
+              <h4 class="font-bold text-[#0f172a] text-lg">Myriam O.</h4>
+              <p class="text-sm text-[#64748b]">Diciembre 2025</p>
+            </div>
+          </div>
+          <div class="mb-4">
+            <svg class="w-8 h-8 text-[#00b6e5]/30" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+            </svg>
+          </div>
+          <p class="text-[#334155] leading-relaxed text-base">
+            A mí en lo personal me gustó mucho la terapia y tú forma de ser eres muy linda y haces sentir cómodo y tranquilo gracias por todo tu apoyo espero regresar pronto 🤗❤️
+          </p>
+        </div>
+
+        <!-- Testimonio 6 - Estephania V. -->
+        <div class="flex-shrink-0 w-[calc(100vw-3rem)] md:w-[450px] bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-xl border-2 border-[#00d4aa]/10 hover:border-[#00d4aa]/30 transition-all duration-300">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-12 h-12 bg-gradient-to-br from-[#00d4aa] to-[#0d4b92] rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg">
+              EV
+            </div>
+            <div>
+              <h4 class="font-bold text-[#0f172a] text-lg">Estephania V.</h4>
+              <p class="text-sm text-[#64748b]">Diciembre 2025</p>
+            </div>
+          </div>
+          <div class="mb-4">
+            <svg class="w-8 h-8 text-[#00d4aa]/30" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+            </svg>
+          </div>
+          <p class="text-[#334155] leading-relaxed text-base">
+            Tuve la oportunidad de asistir a terapia con Elena y fue una experiencia súper agradable, es una persona profesional, empática y con gran capacidad para escuchar. Me ayudó muchísimo también a encontrar herramientas para mejorar mi bienestar. La recomiendo ampliamente ✨
+          </p>
+        </div>
+
+        <!-- Testimonio 7 - Lorena V. -->
+        <div class="flex-shrink-0 w-[calc(100vw-3rem)] md:w-[450px] bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-xl border-2 border-[#0d4b92]/10 hover:border-[#0d4b92]/30 transition-all duration-300">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-12 h-12 bg-gradient-to-br from-[#0d4b92] to-[#00b6e5] rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg">
+              LV
+            </div>
+            <div>
+              <h4 class="font-bold text-[#0f172a] text-lg">Lorena V.</h4>
+              <p class="text-sm text-[#64748b]">Diciembre 2025</p>
+            </div>
+          </div>
+          <div class="mb-4">
+            <svg class="w-8 h-8 text-[#0d4b92]/30" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+            </svg>
+          </div>
+          <p class="text-[#334155] leading-relaxed text-base">
+            Súper recomendado la atención 10/10, me ayudaron mucho a recuperarme de una lesión que tenía, claro que volvería!😊
+          </p>
+        </div>
+
+        <!-- Duplicamos los testimonios para el efecto infinito -->
+        <!-- Testimonio 1 (duplicado) -->
+        <div class="flex-shrink-0 w-[calc(100vw-3rem)] md:w-[450px] bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-xl border-2 border-[#0d4b92]/10 hover:border-[#0d4b92]/30 transition-all duration-300">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-12 h-12 bg-gradient-to-br from-[#0d4b92] to-[#00b6e5] rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg">
+              LB
+            </div>
+            <div>
+              <h4 class="font-bold text-[#0f172a] text-lg">Lupita B.</h4>
+              <p class="text-sm text-[#64748b]">Octubre 2023</p>
+            </div>
+          </div>
+          <div class="mb-4">
+            <svg class="w-8 h-8 text-[#0d4b92]/30" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+            </svg>
+          </div>
+          <p class="text-[#334155] leading-relaxed text-base">
+            Excelente servicio, atención y buena charla, sin restarle lo profesional que es. Yo llegué con un dolor fuerte en mi rodilla izquierda y bien hinchada y gracias a Elena ya estoy muy bien... Se la súper recomiendo 10/10.
+          </p>
+        </div>
+
+        <!-- Testimonio 2 (duplicado) -->
+        <div class="flex-shrink-0 w-[calc(100vw-3rem)] md:w-[450px] bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-xl border-2 border-[#00b6e5]/10 hover:border-[#00b6e5]/30 transition-all duration-300">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-12 h-12 bg-gradient-to-br from-[#00b6e5] to-[#00d4aa] rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg">
+              AS
+            </div>
+            <div>
+              <h4 class="font-bold text-[#0f172a] text-lg">Ana S.</h4>
+              <p class="text-sm text-[#64748b]">Noviembre 2025</p>
+            </div>
+          </div>
+          <div class="mb-4">
+            <svg class="w-8 h-8 text-[#00b6e5]/30" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+            </svg>
+          </div>
+          <p class="text-[#334155] leading-relaxed text-base">
+            Gracias Elena!! Quedamos campeonas en dobles y no me dolió nadita 😘
+          </p>
+        </div>
+
+        <!-- Testimonio 3 (duplicado) -->
+        <div class="flex-shrink-0 w-[calc(100vw-3rem)] md:w-[450px] bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-xl border-2 border-[#00d4aa]/10 hover:border-[#00d4aa]/30 transition-all duration-300">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-12 h-12 bg-gradient-to-br from-[#00d4aa] to-[#0d4b92] rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg">
+              LM
+            </div>
+            <div>
+              <h4 class="font-bold text-[#0f172a] text-lg">Luis M.</h4>
+              <p class="text-sm text-[#64748b]">Diciembre 2025</p>
+            </div>
+          </div>
+          <div class="mb-4">
+            <svg class="w-8 h-8 text-[#00d4aa]/30" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+            </svg>
+          </div>
+          <p class="text-[#334155] leading-relaxed text-base">
+            Sí, estoy un poco más inflamado pero porque jugué ayer, recuerdo que algo así me habías comentado que podía pasar. Pero me siento mucho mejor, con más rango de movimiento.
+          </p>
+        </div>
+
+        <!-- Testimonio 4 (duplicado) -->
+        <div class="flex-shrink-0 w-[calc(100vw-3rem)] md:w-[450px] bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-xl border-2 border-[#0d4b92]/10 hover:border-[#0d4b92]/30 transition-all duration-300">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-12 h-12 bg-gradient-to-br from-[#0d4b92] to-[#00b6e5] rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg">
+              JM
+            </div>
+            <div>
+              <h4 class="font-bold text-[#0f172a] text-lg">Juanita M.</h4>
+              <p class="text-sm text-[#64748b]">Noviembre 2025</p>
+            </div>
+          </div>
+          <div class="mb-4">
+            <svg class="w-8 h-8 text-[#0d4b92]/30" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+            </svg>
+          </div>
+          <p class="text-[#334155] leading-relaxed text-base">
+            Mi mamá está FASCINADA contigo 🥰 Llegó muy feliz y caminando sin su bastón 🥹😍 Dice: tu amiga tiene unas manos uff, ¡mágicas! Está súper feliz y encantada de ver resultados y, más que verlos, sentirlos.
+          </p>
+        </div>
+
+        <!-- Testimonio 5 (duplicado) - Myriam O. -->
+        <div class="flex-shrink-0 w-[calc(100vw-3rem)] md:w-[450px] bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-xl border-2 border-[#00b6e5]/10 hover:border-[#00b6e5]/30 transition-all duration-300">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-12 h-12 bg-gradient-to-br from-[#00b6e5] to-[#00d4aa] rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg">
+              MO
+            </div>
+            <div>
+              <h4 class="font-bold text-[#0f172a] text-lg">Myriam O.</h4>
+              <p class="text-sm text-[#64748b]">Diciembre 2025</p>
+            </div>
+          </div>
+          <div class="mb-4">
+            <svg class="w-8 h-8 text-[#00b6e5]/30" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+            </svg>
+          </div>
+          <p class="text-[#334155] leading-relaxed text-base">
+            A mí en lo personal me gustó mucho la terapia y tú forma de ser eres muy linda y haces sentir cómodo y tranquilo gracias por todo tu apoyo espero regresar pronto 🤗❤️
+          </p>
+        </div>
+
+        <!-- Testimonio 6 (duplicado) - Estephania V. -->
+        <div class="flex-shrink-0 w-[calc(100vw-3rem)] md:w-[450px] bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-xl border-2 border-[#00d4aa]/10 hover:border-[#00d4aa]/30 transition-all duration-300">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-12 h-12 bg-gradient-to-br from-[#00d4aa] to-[#0d4b92] rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg">
+              EV
+            </div>
+            <div>
+              <h4 class="font-bold text-[#0f172a] text-lg">Estephania V.</h4>
+              <p class="text-sm text-[#64748b]">Diciembre 2025</p>
+            </div>
+          </div>
+          <div class="mb-4">
+            <svg class="w-8 h-8 text-[#00d4aa]/30" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+            </svg>
+          </div>
+          <p class="text-[#334155] leading-relaxed text-base">
+            Tuve la oportunidad de asistir a terapia con Elena y fue una experiencia súper agradable, es una persona profesional, empática y con gran capacidad para escuchar. Me ayudó muchísimo también a encontrar herramientas para mejorar mi bienestar. La recomiendo ampliamente ✨
+          </p>
+        </div>
+
+        <!-- Testimonio 7 (duplicado) - Lorena V. -->
+        <div class="flex-shrink-0 w-[calc(100vw-3rem)] md:w-[450px] bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-xl border-2 border-[#0d4b92]/10 hover:border-[#0d4b92]/30 transition-all duration-300">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-12 h-12 bg-gradient-to-br from-[#0d4b92] to-[#00b6e5] rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg">
+              LV
+            </div>
+            <div>
+              <h4 class="font-bold text-[#0f172a] text-lg">Lorena V.</h4>
+              <p class="text-sm text-[#64748b]">Diciembre 2025</p>
+            </div>
+          </div>
+          <div class="mb-4">
+            <svg class="w-8 h-8 text-[#0d4b92]/30" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+            </svg>
+          </div>
+          <p class="text-[#334155] leading-relaxed text-base">
+            Súper recomendado la atención 10/10, me ayudaron mucho a recuperarme de una lesión que tenía, claro que volvería!😊
+          </p>
+        </div>
       </div>
     </div>
 
@@ -386,9 +680,7 @@ const regularTestimonials = testimonials.filter(t => !t.featured);
       if (!track || !prevBtn || !nextBtn || !dotsContainer) return;
 
       // Contar testimonios únicos (excluyendo duplicados)
-      // El carrusel tiene el doble de tarjetas por el efecto infinito, dividimos entre 2
-      const allCards = track.querySelectorAll('.flex-shrink-0');
-      const totalTestimonials = Math.floor(allCards.length / 2);
+      const totalTestimonials = 7; // Tenemos 7 testimonios únicos
       let currentIndex = 0;
       let isDragging = false;
       let startPos = 0;
@@ -536,6 +828,43 @@ const regularTestimonials = testimonials.filter(t => !t.featured);
 
       // Inicializar dots
       createDots();
+    });
+  </script>
+
+  <!-- JavaScript del Testimonio Destacado -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const toggleBtn = document.getElementById('toggle-featured-btn');
+      const shortText = document.getElementById('featured-short');
+      const fullText = document.getElementById('featured-full');
+      const btnText = document.getElementById('btn-text');
+      const btnIcon = document.getElementById('btn-icon');
+
+      if (!toggleBtn || !shortText || !fullText || !btnText || !btnIcon) return;
+
+      let isExpanded = false;
+
+      toggleBtn.addEventListener('click', () => {
+        isExpanded = !isExpanded;
+
+        if (isExpanded) {
+          // Mostrar texto completo
+          shortText.classList.add('hidden');
+          fullText.classList.remove('hidden');
+          btnText.textContent = 'Leer Menos';
+          btnIcon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />';
+
+          // NO hacer scroll al expandir, mantener la vista donde está
+        } else {
+          // Mostrar texto corto
+          shortText.classList.remove('hidden');
+          fullText.classList.add('hidden');
+          btnText.textContent = 'Leer Historia Completa';
+          btnIcon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />';
+
+          // NO hacer scroll al colapsar tampoco
+        }
+      });
     });
   </script>
 

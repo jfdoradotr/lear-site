@@ -1,0 +1,52 @@
+---
+import type { Testimonial } from '../data/testimonials';
+
+interface Props {
+  testimonial: Testimonial;
+  index: number;
+}
+
+const { testimonial, index } = Astro.props;
+
+// Definir los 3 gradientes que se rotan
+const gradients = [
+  {
+    bg: 'from-[#0d4b92] to-[#00b6e5]',
+    border: 'border-[#0d4b92]/10 hover:border-[#0d4b92]/30',
+    icon: 'text-[#0d4b92]/30'
+  },
+  {
+    bg: 'from-[#00b6e5] to-[#00d4aa]',
+    border: 'border-[#00b6e5]/10 hover:border-[#00b6e5]/30',
+    icon: 'text-[#00b6e5]/30'
+  },
+  {
+    bg: 'from-[#00d4aa] to-[#0d4b92]',
+    border: 'border-[#00d4aa]/10 hover:border-[#00d4aa]/30',
+    icon: 'text-[#00d4aa]/30'
+  }
+];
+
+// Aplicar gradiente según posición
+const gradient = gradients[index % 3];
+---
+
+<div class={`flex-shrink-0 w-[calc(100vw-3rem)] md:w-[450px] bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-xl border-2 ${gradient.border} transition-all duration-300`}>
+  <div class="flex items-center gap-3 mb-4">
+    <div class={`w-12 h-12 bg-gradient-to-br ${gradient.bg} rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg`}>
+      {testimonial.initials}
+    </div>
+    <div>
+      <h4 class="font-bold text-[#0f172a] text-lg">{testimonial.name}</h4>
+      <p class="text-sm text-[#64748b]">{testimonial.monthName} {testimonial.year}</p>
+    </div>
+  </div>
+  <div class="mb-4">
+    <svg class={`w-8 h-8 ${gradient.icon}`} fill="currentColor" viewBox="0 0 24 24">
+      <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+    </svg>
+  </div>
+  <p class="text-[#334155] leading-relaxed text-base">
+    {testimonial.text}
+  </p>
+</div>
