@@ -1,0 +1,146 @@
+---
+import { holidayBannerConfig, getActiveHolidayConfig } from '../data/holidayBannerConfig';
+
+// Si el banner está deshabilitado, no renderizar nada
+if (!holidayBannerConfig.enabled) {
+  return null;
+}
+
+// Obtener configuración activa (preset o custom)
+const config = getActiveHolidayConfig();
+const { id, message, closedDates, reason, theme, icon } = config;
+---
+
+<aside
+  id="holiday-banner"
+  role="banner"
+  class={`
+    relative w-full bg-gradient-to-r ${theme.bgGradient}
+    backdrop-blur-xl border-b border-gray-200/50
+    shadow-lg overflow-hidden
+  `}
+  data-banner-id={id}
+>
+  <!-- Decorative elements -->
+  <div class="absolute inset-0 opacity-10">
+    <div class="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-current rounded-full blur-3xl"></div>
+    <div class="absolute bottom-0 left-0 w-64 h-64 bg-gradient-to-br from-current rounded-full blur-3xl"></div>
+  </div>
+
+  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+    <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+      <!-- Icon + Message Section -->
+      <div class="flex items-start gap-4 flex-1">
+        <!-- Icon Container with Emoji -->
+        <div class="relative flex-shrink-0">
+          <!-- Gradient Background Container -->
+          <div class={`w-14 h-14 sm:w-16 sm:h-16 bg-gradient-to-br ${theme.iconColor} rounded-2xl flex items-center justify-center shadow-lg`}>
+            <!-- Emoji -->
+            <span class="text-3xl sm:text-4xl animate-pulse" style="animation-duration: 2s;">
+              {theme.emoji}
+            </span>
+          </div>
+        </div>
+
+        <!-- Message Content -->
+        <div class="flex-1 min-w-0">
+          <h2 class={`text-lg sm:text-xl font-bold ${theme.textColor} mb-2`}>
+            {message}
+          </h2>
+          <div class="flex flex-wrap items-center gap-2 text-sm sm:text-base">
+            <span class="text-gray-700 font-medium">No daremos servicio:</span>
+            <div class="flex flex-wrap gap-2">
+              {closedDates.map((date) => (
+                <span class={`inline-flex items-center px-3 py-1 rounded-full bg-white/60 backdrop-blur-sm ${theme.accentColor} font-semibold text-sm shadow-sm border border-gray-200/50`}>
+                  {date}
+                </span>
+              ))}
+            </div>
+          </div>
+          <p class="text-gray-600 text-sm mt-1">
+            {reason}
+          </p>
+        </div>
+      </div>
+
+      <!-- Close Button -->
+      <button
+        id="close-holiday-banner"
+        type="button"
+        aria-label="Cerrar aviso"
+        class="flex-shrink-0 w-10 h-10 rounded-full bg-white/60 hover:bg-white backdrop-blur-sm flex items-center justify-center transition-all duration-300 hover:scale-110 shadow-md hover:shadow-lg border border-gray-200/50 group"
+      >
+        <svg class="w-5 h-5 text-gray-600 group-hover:text-gray-900 transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+  </div>
+</aside>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const banner = document.getElementById('holiday-banner');
+    const closeBtn = document.getElementById('close-holiday-banner');
+
+    if (!banner || !closeBtn) return;
+
+    const bannerId = banner.getAttribute('data-banner-id');
+    const storageKey = `holidayBanner_${bannerId}_dismissed`;
+
+    // Verificar si ya fue cerrado en esta sesión
+    const isDismissed = sessionStorage.getItem(storageKey);
+
+    if (isDismissed === 'true') {
+      banner.style.display = 'none';
+      return;
+    }
+
+    // Aplicar animación de entrada
+    banner.classList.add('banner-slide-down');
+
+    // Handler para cerrar
+    closeBtn.addEventListener('click', () => {
+      banner.classList.add('banner-fade-out');
+
+      setTimeout(() => {
+        banner.style.display = 'none';
+        sessionStorage.setItem(storageKey, 'true');
+      }, 300);
+    });
+  });
+</script>
+
+<style>
+  /* Animación de entrada */
+  @keyframes slideDown {
+    from {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  .banner-slide-down {
+    animation: slideDown 0.5s ease-out forwards;
+  }
+
+  /* Animación de salida */
+  @keyframes fadeOut {
+    from {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    to {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+  }
+
+  .banner-fade-out {
+    animation: fadeOut 0.3s ease-out forwards;
+  }
+</style>

@@ -1,5 +1,7 @@
 ---
 import '../styles/global.css';
+import HolidayBanner from '../components/HolidayBanner.astro';
+import { holidayBannerConfig } from '../data/holidayBannerConfig';
 
 interface Props {
   title: string;
@@ -84,6 +86,9 @@ const { title, description = "LEAR - Centro de Fisioterapia & Rehabilitación In
         </div>
       </nav>
     </header>
+
+    <!-- Holiday Banner -->
+    {holidayBannerConfig.enabled && <HolidayBanner />}
 
     <!-- Main Content -->
     <main class="flex-grow">
