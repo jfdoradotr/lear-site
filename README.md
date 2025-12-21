@@ -165,7 +165,7 @@ This is a private project for LEAR Physiotherapy Center. For inquiries, please c
 **LEAR - Centro de Fisioterapia & Rehabilitación Integral**
 
 - **Location:** Av. Juarez 368, Primero de Cobián Centro, 27000 Torreón, Coah.
-- **WhatsApp:** [+52 871 106 9004](https://wa.me/528711069004)
+- **WhatsApp:** [+52 871 755 8798](https://wa.me/5218717558798)
 - **Hours:**
   - Tue-Fri: 10:00 AM - 1:00 PM, 2:00 PM - 7:00 PM
   - Sat: 10:00 AM - 5:00 PM

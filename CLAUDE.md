@@ -148,7 +148,7 @@ Always reference brand colors through Tailwind utilities:
 
 ### Contact Integration
 WhatsApp link in footer (Layout.astro:189-206):
-- Number: +52 871 106 9004
+- Number: +52 871 755 8798
 - Formatted as clickable button with WhatsApp brand color (#25D366)
 - Mobile-optimized with `wa.me` link
 
