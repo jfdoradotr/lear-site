@@ -173,7 +173,7 @@ const HOLIDAY_PRESETS: Record<Exclude<HolidayType, 'custom'>, HolidayConfig> = {
  * 3. Definir customConfig con todos los detalles
  */
 export const holidayBannerConfig = {
-  enabled: true,
+  enabled: false,
   type: 'christmas' as HolidayType,
   year: 2025,
 
