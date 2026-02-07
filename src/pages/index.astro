@@ -375,6 +375,37 @@ const regularTestimonials = testimonials.filter(t => !t.featured);
     </div>
   </section>
 
+  <!-- Encuesta de Servicio CTA -->
+  <section class="relative py-16 bg-white overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-r from-lear-bg-primary/60 to-lear-bg-secondary/40"></div>
+    <div class="absolute -top-20 -right-20 w-72 h-72 bg-lear-primary/10 rounded-full blur-3xl"></div>
+    <div class="absolute -bottom-20 -left-20 w-72 h-72 bg-lear-accent/10 rounded-full blur-3xl"></div>
+
+    <div class="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-white/90 backdrop-blur rounded-3xl border border-lear-gray-100 shadow-xl p-8 md:p-12 text-center">
+        <div class="inline-flex items-center gap-2 px-5 py-2 bg-gradient-to-r from-lear-primary/10 to-lear-secondary/10 rounded-full font-semibold text-sm mb-5 border border-lear-primary/20">
+          <div class="w-2 h-2 bg-lear-primary rounded-full animate-pulse"></div>
+          ¿NOS AYUDAS A MEJORAR?
+        </div>
+        <h2 class="text-3xl md:text-4xl font-black text-lear-gray-900 mb-4">
+          Comparte tu experiencia con <span class="bg-gradient-to-r from-lear-primary to-lear-secondary bg-clip-text text-transparent">LEAR</span>
+        </h2>
+        <p class="text-lg text-lear-gray-600 mb-8 max-w-2xl mx-auto">
+          Tu opinión es confidencial y nos ayuda a seguir ofreciendo el mejor servicio.
+        </p>
+        <a
+          href="/encuesta-servicio"
+          class="inline-flex items-center justify-center gap-3 bg-lear-primary hover:bg-lear-primary-dark text-white px-8 py-4 rounded-2xl font-bold text-lg shadow-lg hover:shadow-xl transition-all hover:scale-105"
+        >
+          Ir a la encuesta de servicio
+          <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
   <!-- JavaScript del Carrusel -->
   <script>
     document.addEventListener('DOMContentLoaded', () => {

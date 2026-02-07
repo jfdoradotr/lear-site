@@ -1,0 +1,51 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const formUrl = 'https://forms.gle/hDp3GDDJTyovThey9';
+const embedUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSf72R7__t4BqMr6OaoDA-PJRwnKrcB06W53TzlKjCFlrnGu5g/viewform?embedded=true';
+---
+
+<Layout title="LEAR - Encuesta de Servicio">
+  <section class="relative py-20 bg-lear-bg-primary overflow-hidden">
+    <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-lear-primary/5 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-0 left-0 w-[400px] h-[400px] bg-lear-secondary/5 rounded-full blur-3xl"></div>
+
+    <div class="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-10">
+        <div class="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-lear-primary/10 to-lear-secondary/10 backdrop-blur-sm rounded-full font-semibold text-sm mb-6 border border-lear-primary/20">
+          <div class="w-2 h-2 bg-lear-primary rounded-full animate-pulse"></div>
+          TU OPINIÓN IMPORTA
+        </div>
+        <h1 class="text-4xl md:text-5xl font-black text-lear-gray-900 mb-4">
+          Encuesta de <span class="bg-gradient-to-r from-lear-primary to-lear-secondary bg-clip-text text-transparent">Servicio</span>
+        </h1>
+        <p class="text-lg text-lear-gray-600 max-w-2xl mx-auto">
+          Tu evaluación es confidencial y nos ayuda a mejorar la calidad de atención en LEAR.
+        </p>
+      </div>
+
+      <div class="flex flex-col sm:flex-row gap-3 justify-center mb-8">
+        <a
+          href={formUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-2xl font-semibold text-white bg-lear-primary hover:bg-lear-primary-dark transition-colors"
+        >
+          Abrir en Google Forms
+        </a>
+        <p class="text-sm text-lear-gray-500 flex items-center justify-center">
+          Si no carga, usa este botón.
+        </p>
+      </div>
+
+      <div class="bg-white rounded-3xl shadow-xl border border-lear-gray-100 overflow-hidden">
+        <iframe
+          src={embedUrl}
+          title="Encuesta de servicio LEAR"
+          class="w-full h-[1382px] border-0"
+          loading="lazy"
+        ></iframe>
+      </div>
+    </div>
+  </section>
+</Layout>
