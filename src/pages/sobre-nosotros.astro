@@ -21,22 +21,62 @@ import Layout from '../layouts/Layout.astro';
     </div>
   </section>
 
-  <!-- About Content -->
-  <section class="py-20 bg-white">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="max-w-none">
-        <h2 class="text-3xl md:text-4xl font-black text-lear-gray-900 mb-6">Nuestra Historia</h2>
-        <p class="text-lear-gray-600 mb-6 leading-relaxed">
-          LEAR nace con la visión de ofrecer servicios integrales de fisioterapia y rehabilitación
-          de la más alta calidad. Antes conocidos como Fisio con Elena, hemos evolucionado para
-          convertirnos en un centro integral que combina la experiencia profesional con un enfoque
-          personalizado en cada tratamiento.
-        </p>
-        <p class="text-lear-gray-600 mb-8 leading-relaxed">
-          Nuestro compromiso es proporcionar a cada paciente las herramientas y el acompañamiento
-          necesario para alcanzar sus objetivos de salud y bienestar, ya sea recuperándose de una
-          lesión, mejorando su condición física o buscando prevenir futuras complicaciones.
-        </p>
+  <!-- Founder & Story -->
+  <section class="relative py-24 bg-white overflow-hidden">
+    <!-- Decorative background -->
+    <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-lear-secondary/5 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-0 left-0 w-[400px] h-[400px] bg-lear-accent/5 rounded-full blur-3xl"></div>
+
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <!-- Photo -->
+        <div class="relative">
+          <!-- Decorative offset frame -->
+          <div class="absolute -inset-4 bg-gradient-to-br from-lear-primary/20 via-lear-secondary/20 to-lear-accent/20 rounded-[2.5rem] blur-2xl"></div>
+          <div class="absolute -top-3 -left-3 w-full h-full bg-gradient-to-br from-lear-secondary to-lear-accent rounded-3xl"></div>
+          <div class="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white">
+            <img
+              src="/images/team/elena-fundadora.jpg"
+              alt="Laura Elena Alemán Román, fundadora de LEAR"
+              class="w-full h-auto object-cover"
+              loading="lazy"
+            />
+          </div>
+          <!-- Floating signature badge -->
+          <div class="absolute -bottom-5 left-1/2 -translate-x-1/2 md:left-auto md:-right-4 md:translate-x-0 bg-white rounded-2xl shadow-xl px-5 py-3 border border-lear-gray-100 flex items-center gap-3">
+            <div class="w-2 h-10 bg-gradient-to-b from-lear-primary to-lear-secondary rounded-full"></div>
+            <div>
+              <p class="text-xs font-bold text-lear-secondary uppercase tracking-wide">Fundadora</p>
+              <p class="text-sm font-black text-lear-gray-900">Laura Elena Alemán Román</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Text -->
+        <div>
+          <div class="inline-flex items-center gap-2 px-5 py-2 bg-gradient-to-r from-lear-primary/10 to-lear-secondary/10 rounded-full font-bold text-xs md:text-sm mb-6 border border-lear-primary/20">
+            <div class="w-2 h-2 bg-lear-primary rounded-full animate-pulse"></div>
+            NUESTRA HISTORIA
+          </div>
+          <h2 class="text-3xl md:text-5xl font-black text-lear-gray-900 mb-6 leading-tight">
+            Conoce a <span class="bg-gradient-to-r from-lear-primary to-lear-secondary bg-clip-text text-transparent">Laura Elena Alemán Román</span>
+          </h2>
+          <p class="text-lg text-lear-gray-600 mb-5 leading-relaxed">
+            LEAR nace de la visión de Laura Elena, fisioterapeuta detrás de lo que originalmente conociste
+            como <strong>Fisio con Elena</strong>. Lo que empezó como una consulta personal se transformó
+            en un centro integral de fisioterapia y rehabilitación que combina experiencia profesional con
+            un enfoque cercano y personalizado.
+          </p>
+          <p class="text-lg text-lear-gray-600 mb-5 leading-relaxed">
+            Su compromiso es claro: acompañar a cada paciente con las herramientas y el cuidado necesarios
+            para alcanzar sus objetivos de salud y bienestar —ya sea recuperándose de una lesión, mejorando
+            su condición física o previniendo futuras complicaciones.
+          </p>
+          <p class="text-lg text-lear-gray-600 leading-relaxed">
+            Hoy, LEAR es un equipo de profesionales que comparte esa misma visión y atiende cada caso
+            con la misma cercanía con la que Elena empezó.
+          </p>
+        </div>
       </div>
     </div>
   </section>

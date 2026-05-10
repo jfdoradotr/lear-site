@@ -8,7 +8,9 @@ if (!holidayBannerConfig.enabled) {
 
 // Obtener configuración activa (preset o custom)
 const config = getActiveHolidayConfig();
-const { id, message, closedDates, reason, theme, icon } = config;
+const { id, message, closedDates, reason, theme, celebration } = config;
+const mode = holidayBannerConfig.mode ?? 'closure';
+const isCelebration = mode === 'celebration' && celebration !== undefined;
 ---
 
 <aside
@@ -44,22 +46,35 @@ const { id, message, closedDates, reason, theme, icon } = config;
 
         <!-- Message Content -->
         <div class="flex-1 min-w-0">
-          <h2 class={`text-lg sm:text-xl font-bold ${theme.textColor} mb-2`}>
-            {message}
-          </h2>
-          <div class="flex flex-wrap items-center gap-2 text-sm sm:text-base">
-            <span class="text-gray-700 font-medium">No daremos servicio:</span>
-            <div class="flex flex-wrap gap-2">
-              {closedDates.map((date) => (
-                <span class={`inline-flex items-center px-3 py-1 rounded-full bg-white/60 backdrop-blur-sm ${theme.accentColor} font-semibold text-sm shadow-sm border border-gray-200/50`}>
-                  {date}
-                </span>
-              ))}
-            </div>
-          </div>
-          <p class="text-gray-600 text-sm mt-1">
-            {reason}
-          </p>
+          {isCelebration ? (
+            <>
+              <h2 class={`text-lg sm:text-2xl font-bold ${theme.accentColor} mb-1`}>
+                {celebration!.title}
+              </h2>
+              <p class={`text-sm sm:text-base ${theme.textColor} leading-relaxed`}>
+                {celebration!.subtitle}
+              </p>
+            </>
+          ) : (
+            <>
+              <h2 class={`text-lg sm:text-xl font-bold ${theme.textColor} mb-2`}>
+                {message}
+              </h2>
+              <div class="flex flex-wrap items-center gap-2 text-sm sm:text-base">
+                <span class="text-gray-700 font-medium">No daremos servicio:</span>
+                <div class="flex flex-wrap gap-2">
+                  {closedDates.map((date) => (
+                    <span class={`inline-flex items-center px-3 py-1 rounded-full bg-white/60 backdrop-blur-sm ${theme.accentColor} font-semibold text-sm shadow-sm border border-gray-200/50`}>
+                      {date}
+                    </span>
+                  ))}
+                </div>
+              </div>
+              <p class="text-gray-600 text-sm mt-1">
+                {reason}
+              </p>
+            </>
+          )}
         </div>
       </div>
 

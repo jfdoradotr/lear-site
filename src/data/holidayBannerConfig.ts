@@ -22,12 +22,19 @@ export type HolidayType =
   | 'independence'   // 🇲🇽 Día de la Independencia
   | 'custom';        // 📌 Personalizado
 
+export type HolidayMode = 'closure' | 'celebration';
+
 export interface HolidayTheme {
   bgGradient: string;    // Clases Tailwind para gradiente de fondo
   iconColor: string;     // Clases Tailwind para color del contenedor de ícono
   textColor: string;     // Clases Tailwind para color del texto principal
   accentColor: string;   // Clases Tailwind para color de badges de fechas
   emoji: string;         // Emoji representativo de la festividad
+}
+
+export interface HolidayCelebration {
+  title: string;     // Título celebratorio (ej. "¡Feliz Día de las Madres!")
+  subtitle: string;  // Mensaje cálido de acompañamiento
 }
 
 interface HolidayConfig {
@@ -37,6 +44,7 @@ interface HolidayConfig {
   reason: string;
   theme: HolidayTheme;
   icon: 'snowflake' | 'calendar' | 'info';
+  celebration?: HolidayCelebration;
 }
 
 // ============================================================================
@@ -131,7 +139,11 @@ const HOLIDAY_PRESETS: Record<Exclude<HolidayType, 'custom'>, HolidayConfig> = {
       accentColor: 'text-pink-600',
       emoji: '💐'
     },
-    icon: 'calendar'
+    icon: 'calendar',
+    celebration: {
+      title: '¡Feliz Día de las Madres!',
+      subtitle: 'Hoy celebramos a quienes dan vida, cuidan y sostienen con amor. Gracias, mamá, por todo lo que haces. Con cariño, todo el equipo de LEAR. 💐'
+    }
   },
 
   /**
@@ -173,9 +185,13 @@ const HOLIDAY_PRESETS: Record<Exclude<HolidayType, 'custom'>, HolidayConfig> = {
  * 3. Definir customConfig con todos los detalles
  */
 export const holidayBannerConfig = {
-  enabled: false,
-  type: 'christmas' as HolidayType,
-  year: 2025,
+  enabled: true,
+  type: 'mothers-day' as HolidayType,
+  year: 2026,
+
+  // 'closure' = aviso de horario / cierre (default histórico)
+  // 'celebration' = mensaje cálido de felicitación, sin "No daremos servicio"
+  mode: 'celebration' as HolidayMode,
 
   // Solo se usa cuando type = 'custom'
   customConfig: undefined as HolidayConfig | undefined
