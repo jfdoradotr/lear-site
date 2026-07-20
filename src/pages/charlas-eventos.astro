@@ -718,10 +718,11 @@ import Layout from '../layouts/Layout.astro';
       <!-- Logo + credit card -->
       <div class="max-w-2xl mx-auto mb-16">
         <div class="relative bg-white rounded-3xl shadow-xl border border-[#e2e8f0] p-8 flex flex-col sm:flex-row items-center gap-6 overflow-hidden">
-          <!-- Corner ribbon badge -->
-          <div class="absolute top-[22px] -right-[42px] w-[190px] rotate-45 z-10 pointer-events-none bg-gradient-to-r from-[#7c3aed] to-[#ff8c42] text-white text-[11px] font-black uppercase text-center py-2 shadow-lg">
-            Patrocinador
-          </div>
+          <!-- Sponsor tag: LEAR is the sponsor of this race (not the other way around) -->
+          <span class="absolute top-4 right-4 z-10 inline-flex items-center gap-1.5 rounded-full bg-gradient-to-r from-[#7c3aed] to-[#ff8c42] px-3 py-1.5 text-[11px] font-black uppercase tracking-wide text-white shadow-lg">
+            <svg class="w-3.5 h-3.5 shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.958a1 1 0 00.95.69h4.162c.969 0 1.371 1.24.588 1.81l-3.368 2.447a1 1 0 00-.364 1.118l1.287 3.957c.3.922-.755 1.688-1.54 1.118l-3.367-2.447a1 1 0 00-1.175 0l-3.367 2.447c-.784.57-1.838-.196-1.539-1.118l1.286-3.957a1 1 0 00-.363-1.118L2.075 9.385c-.783-.57-.38-1.81.588-1.81h4.162a1 1 0 00.95-.69l1.286-3.958z"/></svg>
+            LEAR · Patrocinador
+          </span>
           <img
             src="/images/charlas/7k-logo.jpg"
             alt="Logo de la carrera 7K Todo por Ayudar"
@@ -870,6 +871,111 @@ import Layout from '../layouts/Layout.astro';
             <p class="text-sm text-[#475569] leading-relaxed">
               También participamos en la rifa organizada con motivo de la carrera, entregando premios a los ganadores.
             </p>
+          </div>
+        </div>
+
+        <!-- Photo 7: Equipo en el stand -->
+        <div class="group relative bg-white rounded-3xl overflow-hidden shadow-xl border border-[#e2e8f0] hover:shadow-[0_20px_60px_rgba(124,58,237,0.2)] transition-all duration-500 hover:-translate-y-2">
+          <div class="aspect-[3/4] overflow-hidden bg-gradient-to-br from-[#f5f0ff] to-[#fff4ec]">
+            <img
+              src="/images/charlas/7k-staff-stand.jpg"
+              alt="Equipo de LEAR frente al stand y banners de la carrera 7K"
+              class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+              loading="lazy"
+            />
+          </div>
+          <div class="p-6">
+            <div class="inline-flex items-center gap-2 px-3 py-1 bg-[#7c3aed]/10 rounded-full text-xs font-bold text-[#7c3aed] mb-3">
+              EQUIPO LEAR
+            </div>
+            <h3 class="text-lg font-black text-[#0f172a] mb-2">Nuestro equipo en el stand</h3>
+            <p class="text-sm text-[#475569] leading-relaxed">
+              Parte del equipo LEAR listo para atender y acompañar a los corredores durante toda la jornada.
+            </p>
+          </div>
+        </div>
+
+        <!-- Photo 8: Todo el equipo -->
+        <div class="group relative bg-white rounded-3xl overflow-hidden shadow-xl border border-[#e2e8f0] hover:shadow-[0_20px_60px_rgba(255,140,66,0.2)] transition-all duration-500 hover:-translate-y-2">
+          <div class="aspect-[3/4] overflow-hidden bg-gradient-to-br from-[#fff4ec] to-[#fdf2f8]">
+            <img
+              src="/images/charlas/7k-staff-grupo.jpg"
+              alt="Todo el equipo de LEAR reunido en el stand de la carrera 7K"
+              class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+              loading="lazy"
+            />
+          </div>
+          <div class="p-6">
+            <div class="inline-flex items-center gap-2 px-3 py-1 bg-[#ff8c42]/10 rounded-full text-xs font-bold text-[#ff8c42] mb-3">
+              TODO EL EQUIPO
+            </div>
+            <h3 class="text-lg font-black text-[#0f172a] mb-2">Todo el equipo, una misma misión</h3>
+            <p class="text-sm text-[#475569] leading-relaxed">
+              Nos reunimos como equipo completo para celebrar el cierre de una jornada llena de esfuerzo y salud.
+            </p>
+          </div>
+        </div>
+
+        <!-- Video: Atención en vivo -->
+        <div class="group relative bg-white rounded-3xl overflow-hidden shadow-xl border border-[#e2e8f0] hover:shadow-[0_20px_60px_rgba(124,58,237,0.2)] transition-all duration-500 hover:-translate-y-2">
+          <div class="aspect-[3/4] overflow-hidden bg-gradient-to-br from-[#f5f0ff] to-[#fdf2f8]">
+            <video
+              src="/videos/7k-atencion-stand.mp4"
+              poster="/images/charlas/7k-atencion-stand-poster.jpg"
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+              autoplay
+              muted
+              loop
+              playsinline
+              preload="metadata"
+            ></video>
+          </div>
+          <div class="p-6">
+            <div class="inline-flex items-center gap-2 px-3 py-1 bg-[#7c3aed]/10 rounded-full text-xs font-bold text-[#7c3aed] mb-3">
+              EN ACCIÓN
+            </div>
+            <h3 class="text-lg font-black text-[#0f172a] mb-2">Terapia en plena carrera</h3>
+            <p class="text-sm text-[#475569] leading-relaxed">
+              Nuestro equipo dando atención y masaje de descarga a los corredores, en vivo desde el stand.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Paciente Patrocinado: Ricardo Salazar -->
+      <div class="mt-20 max-w-5xl mx-auto">
+        <div class="text-center mb-10">
+          <div class="inline-flex items-center gap-2 px-5 py-2 bg-gradient-to-r from-lear-primary/15 to-lear-secondary/15 backdrop-blur-sm rounded-full font-bold text-xs md:text-sm mb-6 border border-lear-primary/20">
+            <div class="w-2 h-2 bg-lear-primary rounded-full animate-pulse"></div>
+            PACIENTE PATROCINADO
+          </div>
+          <h3 class="text-3xl md:text-4xl font-black text-[#0f172a] mb-4">
+            Felicidades, <span class="bg-gradient-to-r from-lear-primary to-lear-secondary bg-clip-text text-transparent">Ricardo Salazar</span>
+          </h3>
+        </div>
+
+        <div class="relative bg-white rounded-3xl shadow-xl border border-[#e2e8f0] overflow-hidden">
+          <div class="grid grid-cols-1 md:grid-cols-2">
+            <div class="relative bg-[#f8fafc] flex items-center justify-center p-4">
+              <!-- Seal badge -->
+              <div class="absolute top-6 right-6 z-10 w-20 h-20 sm:w-24 sm:h-24 rounded-full bg-gradient-to-br from-lear-primary to-lear-secondary flex flex-col items-center justify-center text-white text-center shadow-lg border-4 border-white leading-tight">
+                <span class="text-lg sm:text-xl font-black">6to</span>
+                <span class="text-[9px] sm:text-[10px] font-bold uppercase">Lugar 10K</span>
+              </div>
+              <img
+                src="/images/charlas/7k-ricardo-patrocinado.jpg"
+                alt="Gráfico de felicitación para Ricardo Salazar, paciente patrocinado por LEAR"
+                class="w-full h-auto object-contain rounded-2xl"
+                loading="lazy"
+              />
+            </div>
+            <div class="p-8 md:p-10 flex flex-col justify-center">
+              <p class="text-base md:text-lg text-[#475569] leading-relaxed">
+                El 19 de julio de 2026 patrocinamos a <strong>Ricardo Salazar</strong>, paciente de LEAR, quien conquistó
+                el <strong>6to lugar en la categoría 10K</strong> de la carrera 7K Todo por Ayudar. Lo acompañamos en su
+                recuperación y su rendimiento — ¡sigue brillando, Ricardo!
+              </p>
+            </div>
           </div>
         </div>
       </div>
