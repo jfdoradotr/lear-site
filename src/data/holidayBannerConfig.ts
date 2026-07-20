@@ -1,13 +1,17 @@
 /**
  * Sistema de Banners para Festividades
  *
- * Sistema completo de festividades mexicanas predefinidas con paletas de colores
- * y emojis característicos. Incluye opción custom para casos especiales.
+ * Sistema completo de festividades mexicanas predefinidas con paletas de colores,
+ * emojis característicos y una ventana de fechas activa (`activeWindow`).
+ *
+ * El banner se muestra/oculta automáticamente en el navegador del visitante según
+ * la fecha de hoy — no requiere rebuild ni cron: basta con dejar la festividad
+ * en `scheduledHolidays` y el componente decide cuál mostrar (si alguna aplica hoy).
  *
  * USO RÁPIDO:
- * 1. Cambiar 'type' a la festividad deseada
- * 2. Actualizar 'year' al año actual
- * 3. Set 'enabled: true' para activar
+ * 1. Agregar/quitar festividades en `scheduledHolidays` (abajo).
+ * 2. Actualizar 'year' de cada una al año que corresponda.
+ * 3. Set 'enabled: true' para activar el sistema completo.
  */
 
 // ============================================================================
@@ -37,6 +41,15 @@ export interface HolidayCelebration {
   subtitle: string;  // Mensaje cálido de acompañamiento
 }
 
+/**
+ * Ventana de fechas en que la festividad se considera "activa" (formato 'MM-DD').
+ * Si `start` > `end` (ej. 12-20 -> 01-02), la ventana cruza el fin de año.
+ */
+export interface HolidayWindow {
+  start: string;
+  end: string;
+}
+
 interface HolidayConfig {
   id: string;
   message: string;
@@ -44,6 +57,7 @@ interface HolidayConfig {
   reason: string;
   theme: HolidayTheme;
   icon: 'snowflake' | 'calendar' | 'info';
+  activeWindow: HolidayWindow;
   celebration?: HolidayCelebration;
 }
 
@@ -74,12 +88,14 @@ const HOLIDAY_PRESETS: Record<Exclude<HolidayType, 'custom'>, HolidayConfig> = {
       accentColor: 'text-red-700',
       emoji: '🎄'
     },
-    icon: 'snowflake'
+    icon: 'snowflake',
+    // Cruza fin de año: 20 de diciembre -> 2 de enero
+    activeWindow: { start: '12-20', end: '01-02' }
   },
 
   /**
    * ✝️ SEMANA SANTA
-   * Fechas: Jueves Santo y Viernes Santo (VARIABLES - actualizar cada año)
+   * Fechas: Jueves Santo y Viernes Santo (VARIABLES - actualizar cada año, Pascua es una fiesta movible)
    * Colores: Púrpura, lavanda, violeta
    */
   'easter': {
@@ -89,7 +105,6 @@ const HOLIDAY_PRESETS: Record<Exclude<HolidayType, 'custom'>, HolidayConfig> = {
       'Jueves Santo',
       'Viernes Santo'
       // NOTA: Actualizar con fechas específicas cada año
-      // Ejemplo 2026: '17 de abril', '18 de abril'
     ],
     reason: 'Asueto de Semana Santa',
     theme: {
@@ -99,7 +114,10 @@ const HOLIDAY_PRESETS: Record<Exclude<HolidayType, 'custom'>, HolidayConfig> = {
       accentColor: 'text-purple-700',
       emoji: '✝️'
     },
-    icon: 'calendar'
+    icon: 'calendar',
+    // IMPORTANTE: Pascua es movible — verificar y actualizar esta ventana cada año.
+    // Ejemplo 2026: Jueves Santo 2 de abril, Viernes Santo 3 de abril.
+    activeWindow: { start: '04-01', end: '04-04' }
   },
 
   /**
@@ -119,12 +137,13 @@ const HOLIDAY_PRESETS: Record<Exclude<HolidayType, 'custom'>, HolidayConfig> = {
       accentColor: 'text-orange-700',
       emoji: '💼'
     },
-    icon: 'calendar'
+    icon: 'calendar',
+    activeWindow: { start: '05-01', end: '05-01' }
   },
 
   /**
    * 💐 DÍA DE LAS MADRES
-   * Fecha: 10 de mayo
+   * Fecha: 10 de mayo (fecha fija en México)
    * Colores: Rosa, dorado, rosado suave
    */
   'mothers-day': {
@@ -140,6 +159,7 @@ const HOLIDAY_PRESETS: Record<Exclude<HolidayType, 'custom'>, HolidayConfig> = {
       emoji: '💐'
     },
     icon: 'calendar',
+    activeWindow: { start: '05-09', end: '05-10' },
     celebration: {
       title: '¡Feliz Día de las Madres!',
       subtitle: 'Hoy celebramos a quienes dan vida, cuidan y sostienen con amor. Gracias, mamá, por todo lo que haces. Con cariño, todo el equipo de LEAR. 💐'
@@ -163,7 +183,8 @@ const HOLIDAY_PRESETS: Record<Exclude<HolidayType, 'custom'>, HolidayConfig> = {
       accentColor: 'text-green-700',
       emoji: '🇲🇽'
     },
-    icon: 'calendar'
+    icon: 'calendar',
+    activeWindow: { start: '09-14', end: '09-16' }
   }
 };
 
@@ -172,29 +193,32 @@ const HOLIDAY_PRESETS: Record<Exclude<HolidayType, 'custom'>, HolidayConfig> = {
 // ============================================================================
 
 /**
+ * Una festividad "en rotación": el componente evalúa la fecha de hoy en el
+ * navegador del visitante y muestra la primera cuya `activeWindow` coincida.
+ */
+export interface ScheduledHoliday {
+  type: HolidayType;
+  year: number;
+  mode?: HolidayMode;
+  // Solo se usa cuando type = 'custom'
+  customConfig?: HolidayConfig;
+}
+
+/**
  * CONFIGURACIÓN PRINCIPAL
  *
- * Para activar una festividad predefinida:
- * 1. Set enabled: true
- * 2. Cambiar 'type' a la festividad deseada
- * 3. Actualizar 'year' al año corriente
- *
- * Para usar custom:
- * 1. Set enabled: true
- * 2. Set type: 'custom'
- * 3. Definir customConfig con todos los detalles
+ * - `enabled: false` apaga el sistema completo, sin importar la fecha.
+ * - `scheduledHolidays`: lista de festividades a considerar. El banner se
+ *   muestra automáticamente en la ventana de fechas de cada una (ver
+ *   `activeWindow` en HOLIDAY_PRESETS) sin necesidad de redeploy ni cron.
  */
 export const holidayBannerConfig = {
   enabled: true,
-  type: 'mothers-day' as HolidayType,
-  year: 2026,
-
-  // 'closure' = aviso de horario / cierre (default histórico)
-  // 'celebration' = mensaje cálido de felicitación, sin "No daremos servicio"
-  mode: 'celebration' as HolidayMode,
-
-  // Solo se usa cuando type = 'custom'
-  customConfig: undefined as HolidayConfig | undefined
+  scheduledHolidays: [
+    { type: 'mothers-day', year: 2026, mode: 'celebration' },
+    { type: 'independence', year: 2026, mode: 'closure' },
+    { type: 'christmas', year: 2026, mode: 'closure' }
+  ] as ScheduledHoliday[]
 };
 
 // ============================================================================
@@ -202,32 +226,32 @@ export const holidayBannerConfig = {
 // ============================================================================
 
 /**
- * Obtiene la configuración activa de la festividad
- *
- * - Si type es una festividad predefinida, retorna el preset correspondiente
- * - Si type es 'custom', retorna customConfig
- * - Reemplaza {year} en el ID con el año actual
- *
- * @returns Configuración completa de la festividad activa
+ * Resuelve cada entrada de `scheduledHolidays` a su configuración completa
+ * (con {year} reemplazado en el id). Usado por el componente para renderizar
+ * un banner oculto por festividad; el script en el navegador decide cuál mostrar.
  */
-export function getActiveHolidayConfig(): HolidayConfig {
-  const { type, year, customConfig } = holidayBannerConfig;
+export function getScheduledHolidayConfigs(): Array<HolidayConfig & { mode: HolidayMode }> {
+  return holidayBannerConfig.scheduledHolidays.map((scheduled) => {
+    const mode = scheduled.mode ?? 'closure';
 
-  if (type === 'custom') {
-    if (!customConfig) {
-      throw new Error('customConfig es requerido cuando type = "custom"');
+    if (scheduled.type === 'custom') {
+      if (!scheduled.customConfig) {
+        throw new Error('customConfig es requerido cuando type = "custom"');
+      }
+      return {
+        ...scheduled.customConfig,
+        id: scheduled.customConfig.id.replace('{year}', scheduled.year.toString()),
+        mode
+      };
     }
-    return {
-      ...customConfig,
-      id: customConfig.id.replace('{year}', year.toString())
-    };
-  }
 
-  const preset = HOLIDAY_PRESETS[type as Exclude<HolidayType, 'custom'>];
-  return {
-    ...preset,
-    id: preset.id.replace('{year}', year.toString())
-  };
+    const preset = HOLIDAY_PRESETS[scheduled.type as Exclude<HolidayType, 'custom'>];
+    return {
+      ...preset,
+      id: preset.id.replace('{year}', scheduled.year.toString()),
+      mode
+    };
+  });
 }
 
 // ============================================================================
@@ -235,55 +259,49 @@ export function getActiveHolidayConfig(): HolidayConfig {
 // ============================================================================
 
 /**
- * EJEMPLO 1: Usar Navidad 2025-2026
+ * EJEMPLO 1: Dejar solo Navidad y Día de las Madres en rotación
  *
  * export const holidayBannerConfig = {
  *   enabled: true,
- *   type: 'christmas' as HolidayType,
- *   year: 2025
+ *   scheduledHolidays: [
+ *     { type: 'christmas', year: 2026, mode: 'closure' },
+ *     { type: 'mothers-day', year: 2026, mode: 'celebration' }
+ *   ]
  * };
  */
 
 /**
- * EJEMPLO 2: Usar Día de las Madres 2026
+ * EJEMPLO 2: Agregar un evento especial custom
  *
- * export const holidayBannerConfig = {
- *   enabled: true,
- *   type: 'mothers-day' as HolidayType,
- *   year: 2026
- * };
- */
-
-/**
- * EJEMPLO 3: Usar Custom para evento especial
- *
- * export const holidayBannerConfig = {
- *   enabled: true,
- *   type: 'custom' as HolidayType,
- *   year: 2026,
- *   customConfig: {
- *     id: 'evento-especial-{year}',
- *     message: 'Aviso importante',
- *     closedDates: ['15 de marzo', '16 de marzo'],
- *     reason: 'Evento especial',
- *     theme: {
- *       bgGradient: 'from-white/95 via-blue-50/80 to-cyan-50/80',
- *       iconColor: 'from-blue-600 to-cyan-600',
- *       textColor: 'text-gray-900',
- *       accentColor: 'text-blue-700',
- *       emoji: '📌'
- *     },
- *     icon: 'info'
+ * scheduledHolidays: [
+ *   {
+ *     type: 'custom',
+ *     year: 2026,
+ *     mode: 'celebration',
+ *     customConfig: {
+ *       id: 'evento-especial-{year}',
+ *       message: 'Aviso importante',
+ *       closedDates: [],
+ *       reason: 'Evento especial',
+ *       theme: {
+ *         bgGradient: 'from-white/95 via-blue-50/80 to-cyan-50/80',
+ *         iconColor: 'from-blue-600 to-cyan-600',
+ *         textColor: 'text-gray-900',
+ *         accentColor: 'text-blue-700',
+ *         emoji: '📌'
+ *       },
+ *       icon: 'info',
+ *       activeWindow: { start: '03-15', end: '03-16' }
+ *     }
  *   }
- * };
+ * ]
  */
 
 /**
- * EJEMPLO 4: Desactivar banner
+ * EJEMPLO 3: Desactivar el sistema por completo
  *
  * export const holidayBannerConfig = {
  *   enabled: false,
- *   type: 'christmas' as HolidayType,
- *   year: 2025
+ *   scheduledHolidays: []
  * };
  */

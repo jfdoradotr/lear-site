@@ -38,68 +38,74 @@ import Layout from '../layouts/Layout.astro';
         </p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-6xl mx-auto">
-        <!-- Team Member 1 - Fisioterapeuta / Fundadora -->
-        <div class="bg-white/90 rounded-3xl shadow-2xl overflow-hidden hover:shadow-[0_20px_60px_rgba(13,75,146,0.25)] transition-all hover:-translate-y-2 border border-lear-primary/10 relative">
-          <!-- Badge con imagotipo -->
-          <div class="absolute top-4 right-4 z-10 w-12 h-12 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center shadow-lg border-2 border-lear-primary/20">
-            <img src="/images/imagotipo.svg" alt="LEAR" class="w-8 h-8" />
+      <!-- Founder Spotlight -->
+      <div class="max-w-6xl mx-auto mb-14">
+        <div class="relative bg-white/90 rounded-3xl shadow-2xl overflow-hidden border border-lear-primary/10">
+          <!-- Corner ribbon badge -->
+          <div class="absolute top-[26px] -right-[46px] w-[200px] rotate-45 z-10 pointer-events-none bg-gradient-to-r from-lear-primary to-lear-secondary text-white text-xs font-black uppercase text-center py-2 shadow-lg">
+            Fundadora
           </div>
-          <div class="bg-gradient-to-br from-lear-primary to-lear-secondary h-64 flex items-center justify-center relative overflow-hidden">
-            <!-- Imagotipo como elemento decorativo de fondo -->
-            <div class="absolute inset-0 opacity-5">
-              <img src="/images/imagotipo.svg" alt="" class="w-full h-full object-cover scale-150" />
+
+          <div class="flex flex-col md:flex-row">
+            <div class="relative md:w-2/5 h-72 md:h-auto overflow-hidden">
+              <img
+                src="/images/team/elena-fundadora.jpg"
+                alt="Elena Alemán, fundadora y fisioterapeuta principal de LEAR"
+                class="w-full h-full object-cover object-[50%_20%]"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-lear-primary/40 via-transparent to-transparent md:bg-gradient-to-r"></div>
             </div>
-            <div class="absolute inset-0 opacity-10">
-              <div class="absolute top-0 right-0 w-40 h-40 bg-white rounded-full blur-2xl"></div>
-              <div class="absolute bottom-0 left-0 w-32 h-32 bg-white rounded-full blur-2xl"></div>
-            </div>
-            <div class="relative w-40 h-40 rounded-full bg-white/20 backdrop-blur-sm border-4 border-white/30 flex items-center justify-center shadow-2xl">
-              <span class="text-white text-5xl font-black">EA</span>
-            </div>
-          </div>
-          <div class="p-6">
-            <h3 class="text-2xl font-bold text-lear-gray-900 mb-2">Elena Alemán</h3>
-            <p class="text-lear-primary font-medium mb-4">Fisioterapeuta • Fundadora de LEAR</p>
-            <p class="text-lear-gray-600 mb-4">
-              Fisioterapeuta con amplia experiencia clínica, especializada en rehabilitación y tratamiento de lesiones,
-              creadora del proyecto que hoy es LEAR.
-            </p>
-            <div class="space-y-2 text-sm text-lear-gray-600">
-              <div class="flex items-center">
-                <svg class="w-5 h-5 shrink-0 text-lear-primary mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-                <span>Licenciatura en Terapia Física y Rehabilitación con cédula profesional vigente registrada ante la SEP</span>
-              </div>
-              <div class="flex items-center">
-                <svg class="w-5 h-5 shrink-0 text-lear-primary mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-                <span>Diplomado en Fisioterapia Pediátrica, Estimulación y Atención Temprana</span>
-              </div>
-              <div class="flex items-center">
-                <svg class="w-5 h-5 shrink-0 text-lear-primary mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-                <span>Formación en Fisioterapia de Campo en el Deporte</span>
-              </div>
-              <div class="flex items-center">
-                <svg class="w-5 h-5 shrink-0 text-lear-primary mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-                <span>Punción Seca Funcional y Deportiva</span>
-              </div>
-              <div class="flex items-center">
-                <svg class="w-5 h-5 shrink-0 text-lear-primary mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-                <span>2do Congreso Virtual Internacional de Fisioterapia (AMEFIRE)</span>
+            <div class="p-8 md:p-10 md:w-3/5">
+              <h3 class="text-3xl font-bold text-lear-gray-900 mb-2">Elena Alemán</h3>
+              <p class="text-lear-primary font-semibold mb-4">Fundadora de LEAR • Fisioterapeuta principal</p>
+              <p class="text-lear-gray-600 mb-4">
+                Fisioterapeuta con amplia experiencia clínica, especializada en rehabilitación y tratamiento de lesiones,
+                creadora del proyecto que hoy es LEAR.
+              </p>
+              <div class="space-y-2 text-sm text-lear-gray-600">
+                <div class="flex items-center">
+                  <svg class="w-5 h-5 shrink-0 text-lear-primary mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  <span>Licenciatura en Terapia Física y Rehabilitación con cédula profesional vigente registrada ante la SEP</span>
+                </div>
+                <div class="flex items-center">
+                  <svg class="w-5 h-5 shrink-0 text-lear-primary mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  <span>Diplomado en Fisioterapia Pediátrica, Estimulación y Atención Temprana</span>
+                </div>
+                <div class="flex items-center">
+                  <svg class="w-5 h-5 shrink-0 text-lear-primary mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  <span>Formación en Fisioterapia de Campo en el Deporte</span>
+                </div>
+                <div class="flex items-center">
+                  <svg class="w-5 h-5 shrink-0 text-lear-primary mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  <span>Punción Seca Funcional y Deportiva</span>
+                </div>
+                <div class="flex items-center">
+                  <svg class="w-5 h-5 shrink-0 text-lear-primary mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  <span>2do Congreso Virtual Internacional de Fisioterapia (AMEFIRE)</span>
+                </div>
               </div>
             </div>
           </div>
         </div>
+      </div>
 
+      <div class="text-center mb-10">
+        <div class="inline-flex items-center gap-2 px-5 py-2 bg-lear-primary/10 rounded-full font-semibold text-sm text-lear-primary">
+          Resto del equipo
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 max-w-6xl mx-auto">
         <!-- Team Member 2 - Fisioterapeuta -->
         <div class="bg-white/90 rounded-3xl shadow-2xl overflow-hidden hover:shadow-[0_20px_60px_rgba(13,75,146,0.25)] transition-all hover:-translate-y-2 border border-lear-primary/10 relative">
           <!-- Badge con imagotipo -->

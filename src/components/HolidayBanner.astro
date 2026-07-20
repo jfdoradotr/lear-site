@@ -1,125 +1,145 @@
 ---
-import { holidayBannerConfig, getActiveHolidayConfig } from '../data/holidayBannerConfig';
+import { holidayBannerConfig, getScheduledHolidayConfigs } from '../data/holidayBannerConfig';
 
 // Si el banner está deshabilitado, no renderizar nada
 if (!holidayBannerConfig.enabled) {
   return null;
 }
 
-// Obtener configuración activa (preset o custom)
-const config = getActiveHolidayConfig();
-const { id, message, closedDates, reason, theme, celebration } = config;
-const mode = holidayBannerConfig.mode ?? 'closure';
-const isCelebration = mode === 'celebration' && celebration !== undefined;
+const banners = getScheduledHolidayConfigs();
 ---
 
-<aside
-  id="holiday-banner"
-  role="banner"
-  class={`
-    relative w-full bg-gradient-to-r ${theme.bgGradient}
-    backdrop-blur-xl border-b border-gray-200/50
-    shadow-lg overflow-hidden
-  `}
-  data-banner-id={id}
->
-  <!-- Decorative elements -->
-  <div class="absolute inset-0 opacity-10">
-    <div class="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-current rounded-full blur-3xl"></div>
-    <div class="absolute bottom-0 left-0 w-64 h-64 bg-gradient-to-br from-current rounded-full blur-3xl"></div>
-  </div>
+{banners.length > 0 && (
+  <div id="holiday-banners-root">
+    {banners.map((config) => {
+      const isCelebration = config.mode === 'celebration' && config.celebration !== undefined;
 
-  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-    <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
-      <!-- Icon + Message Section -->
-      <div class="flex items-start gap-4 flex-1">
-        <!-- Icon Container with Emoji -->
-        <div class="relative flex-shrink-0">
-          <!-- Gradient Background Container -->
-          <div class={`w-14 h-14 sm:w-16 sm:h-16 bg-gradient-to-br ${theme.iconColor} rounded-2xl flex items-center justify-center shadow-lg`}>
-            <!-- Emoji -->
-            <span class="text-3xl sm:text-4xl animate-pulse" style="animation-duration: 2s;">
-              {theme.emoji}
-            </span>
+      return (
+        <aside
+          id={`holiday-banner-${config.id}`}
+          role="banner"
+          class={`
+            hidden relative w-full bg-gradient-to-r ${config.theme.bgGradient}
+            backdrop-blur-xl border-b border-gray-200/50
+            shadow-lg overflow-hidden
+          `}
+          data-banner-id={config.id}
+          data-window-start={config.activeWindow.start}
+          data-window-end={config.activeWindow.end}
+        >
+          <!-- Decorative elements -->
+          <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-current rounded-full blur-3xl"></div>
+            <div class="absolute bottom-0 left-0 w-64 h-64 bg-gradient-to-br from-current rounded-full blur-3xl"></div>
           </div>
-        </div>
 
-        <!-- Message Content -->
-        <div class="flex-1 min-w-0">
-          {isCelebration ? (
-            <>
-              <h2 class={`text-lg sm:text-2xl font-bold ${theme.accentColor} mb-1`}>
-                {celebration!.title}
-              </h2>
-              <p class={`text-sm sm:text-base ${theme.textColor} leading-relaxed`}>
-                {celebration!.subtitle}
-              </p>
-            </>
-          ) : (
-            <>
-              <h2 class={`text-lg sm:text-xl font-bold ${theme.textColor} mb-2`}>
-                {message}
-              </h2>
-              <div class="flex flex-wrap items-center gap-2 text-sm sm:text-base">
-                <span class="text-gray-700 font-medium">No daremos servicio:</span>
-                <div class="flex flex-wrap gap-2">
-                  {closedDates.map((date) => (
-                    <span class={`inline-flex items-center px-3 py-1 rounded-full bg-white/60 backdrop-blur-sm ${theme.accentColor} font-semibold text-sm shadow-sm border border-gray-200/50`}>
-                      {date}
+          <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+            <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+              <!-- Icon + Message Section -->
+              <div class="flex items-start gap-4 flex-1">
+                <!-- Circular Seal Badge -->
+                <div class="relative flex-shrink-0">
+                  <div class={`w-14 h-14 sm:w-16 sm:h-16 bg-gradient-to-br ${config.theme.iconColor} rounded-full flex items-center justify-center shadow-lg border-2 border-white/40`}>
+                    <span class="text-3xl sm:text-4xl animate-pulse" style="animation-duration: 2s;">
+                      {config.theme.emoji}
                     </span>
-                  ))}
+                  </div>
+                </div>
+
+                <!-- Message Content -->
+                <div class="flex-1 min-w-0">
+                  {isCelebration ? (
+                    <>
+                      <h2 class={`text-lg sm:text-2xl font-bold ${config.theme.accentColor} mb-1`}>
+                        {config.celebration!.title}
+                      </h2>
+                      <p class={`text-sm sm:text-base ${config.theme.textColor} leading-relaxed`}>
+                        {config.celebration!.subtitle}
+                      </p>
+                    </>
+                  ) : (
+                    <>
+                      <h2 class={`text-lg sm:text-xl font-bold ${config.theme.textColor} mb-2`}>
+                        {config.message}
+                      </h2>
+                      <div class="flex flex-wrap items-center gap-2 text-sm sm:text-base">
+                        <span class="text-gray-700 font-medium">No daremos servicio:</span>
+                        <div class="flex flex-wrap gap-2">
+                          {config.closedDates.map((date) => (
+                            <span class={`inline-flex items-center px-3 py-1 rounded-full bg-white/60 backdrop-blur-sm ${config.theme.accentColor} font-semibold text-sm shadow-sm border border-gray-200/50`}>
+                              {date}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                      <p class="text-gray-600 text-sm mt-1">
+                        {config.reason}
+                      </p>
+                    </>
+                  )}
                 </div>
               </div>
-              <p class="text-gray-600 text-sm mt-1">
-                {reason}
-              </p>
-            </>
-          )}
-        </div>
-      </div>
 
-      <!-- Close Button -->
-      <button
-        id="close-holiday-banner"
-        type="button"
-        aria-label="Cerrar aviso"
-        class="flex-shrink-0 w-10 h-10 rounded-full bg-white/60 hover:bg-white backdrop-blur-sm flex items-center justify-center transition-all duration-300 hover:scale-110 shadow-md hover:shadow-lg border border-gray-200/50 group"
-      >
-        <svg class="w-5 h-5 text-gray-600 group-hover:text-gray-900 transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-        </svg>
-      </button>
-    </div>
+              <!-- Close Button -->
+              <button
+                type="button"
+                aria-label="Cerrar aviso"
+                data-close-holiday-banner
+                class="flex-shrink-0 w-10 h-10 rounded-full bg-white/60 hover:bg-white backdrop-blur-sm flex items-center justify-center transition-all duration-300 hover:scale-110 shadow-md hover:shadow-lg border border-gray-200/50 group"
+              >
+                <svg class="w-5 h-5 text-gray-600 group-hover:text-gray-900 transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </aside>
+      );
+    })}
   </div>
-</aside>
+)}
 
 <script>
   document.addEventListener('DOMContentLoaded', () => {
-    const banner = document.getElementById('holiday-banner');
-    const closeBtn = document.getElementById('close-holiday-banner');
+    const root = document.getElementById('holiday-banners-root');
+    if (!root) return;
 
-    if (!banner || !closeBtn) return;
+    const banners = Array.from(root.querySelectorAll('aside[data-banner-id]')) as HTMLElement[];
+    if (banners.length === 0) return;
 
-    const bannerId = banner.getAttribute('data-banner-id');
+    const today = new Date();
+    const todayKey = `${String(today.getMonth() + 1).padStart(2, '0')}-${String(today.getDate()).padStart(2, '0')}`;
+
+    // Soporta ventanas que cruzan el fin de año (ej. 12-20 -> 01-02)
+    const isWithinWindow = (start: string, end: string, current: string) => {
+      if (start <= end) {
+        return current >= start && current <= end;
+      }
+      return current >= start || current <= end;
+    };
+
+    const active = banners.find((banner) => {
+      const start = banner.getAttribute('data-window-start');
+      const end = banner.getAttribute('data-window-end');
+      return start && end && isWithinWindow(start, end, todayKey);
+    });
+
+    if (!active) return;
+
+    const bannerId = active.getAttribute('data-banner-id');
     const storageKey = `holidayBanner_${bannerId}_dismissed`;
 
-    // Verificar si ya fue cerrado en esta sesión
-    const isDismissed = sessionStorage.getItem(storageKey);
+    if (sessionStorage.getItem(storageKey) === 'true') return;
 
-    if (isDismissed === 'true') {
-      banner.style.display = 'none';
-      return;
-    }
+    active.classList.remove('hidden');
+    active.classList.add('banner-slide-down');
 
-    // Aplicar animación de entrada
-    banner.classList.add('banner-slide-down');
-
-    // Handler para cerrar
-    closeBtn.addEventListener('click', () => {
-      banner.classList.add('banner-fade-out');
+    const closeBtn = active.querySelector('[data-close-holiday-banner]');
+    closeBtn?.addEventListener('click', () => {
+      active.classList.add('banner-fade-out');
 
       setTimeout(() => {
-        banner.style.display = 'none';
+        active.style.display = 'none';
         sessionStorage.setItem(storageKey, 'true');
       }, 300);
     });
