@@ -9,7 +9,10 @@ const featuredTestimonial = testimonials.find(t => t.featured);
 const regularTestimonials = testimonials.filter(t => !t.featured);
 ---
 
-<Layout title="LEAR - Centro de Fisioterapia & Rehabilitación Integral">
+<Layout
+  title="Fisioterapia y Rehabilitación en Torreón | LEAR"
+  description="Centro de fisioterapia, rehabilitación integral y entrenamiento personalizado en Torreón, Coahuila. Atención personalizada y planes de tratamiento a tu medida."
+>
   <!-- Hero Section -->
   <section class="relative min-h-[90vh] flex items-center bg-gradient-to-br from-[#0d4b92] via-[#1560b3] to-[#00b6e5] text-white overflow-hidden">
     <!-- Animated Background Elements -->
@@ -37,21 +40,22 @@ const regularTestimonials = testimonials.filter(t => !t.featured);
         <!-- Badge -->
         <div class="inline-flex items-center gap-2 px-6 py-3 bg-white/10 backdrop-blur-md border border-white/20 rounded-full mb-8 shadow-xl">
           <div class="w-2 h-2 bg-[#00d4aa] rounded-full animate-pulse shadow-lg shadow-[#00d4aa]/50"></div>
-          <span class="text-sm font-semibold tracking-wide">CENTRO PROFESIONAL DE SALUD</span>
+          <span class="text-sm font-semibold tracking-wide">BIENVENIDOS A LEAR</span>
         </div>
 
-        <h1 class="text-6xl md:text-8xl font-black mb-6 leading-none">
-          Bienvenidos a<br/>
+        <h1 class="text-5xl md:text-7xl font-black mb-6 leading-tight">
+          Fisioterapia y Rehabilitación<br/>
+          en
           <span class="relative inline-block">
             <span class="relative z-10 bg-gradient-to-r from-white via-[#66d4f1] to-white bg-clip-text text-transparent">
-              LEAR
+              Torreón
             </span>
             <div class="absolute inset-0 bg-white/20 blur-2xl"></div>
           </span>
         </h1>
 
         <p class="text-2xl md:text-4xl mb-8 font-bold text-[#66d4f1]">
-          Centro de Fisioterapia & Rehabilitación Integral
+          Centro de Rehabilitación Integral
         </p>
 
         <p class="text-xl md:text-2xl max-w-4xl mx-auto text-white/90 mb-12 leading-relaxed font-light">
@@ -151,7 +155,7 @@ const regularTestimonials = testimonials.filter(t => !t.featured);
                 <div class="relative">
                   <div class="absolute inset-0 bg-gradient-to-br from-[#0d4b92] to-[#1560b3] rounded-3xl blur-lg opacity-50 group-hover:opacity-75 transition-opacity"></div>
                   <div class="relative w-24 h-24 bg-gradient-to-br from-[#0d4b92] to-[#1560b3] rounded-3xl flex items-center justify-center transform group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-lg p-4">
-                    <img src="/images/panda/panda-fisioterapia.png" alt="Panda Fisioterapia" class="w-full h-full object-contain" />
+                    <img src="/images/panda/panda-fisioterapia.png" alt="Panda Fisioterapia" class="w-full h-full object-contain" loading="lazy" />
                   </div>
                 </div>
               </div>
@@ -197,7 +201,7 @@ const regularTestimonials = testimonials.filter(t => !t.featured);
                 <div class="relative">
                   <div class="absolute inset-0 bg-gradient-to-br from-[#00b6e5] to-[#33c7ed] rounded-3xl blur-lg opacity-50 group-hover:opacity-75 transition-opacity"></div>
                   <div class="relative w-24 h-24 bg-gradient-to-br from-[#00b6e5] to-[#33c7ed] rounded-3xl flex items-center justify-center transform group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-lg p-4">
-                    <img src="/images/panda/panda-rehabilitacion.png" alt="Panda Rehabilitación" class="w-full h-full object-contain" />
+                    <img src="/images/panda/panda-rehabilitacion.png" alt="Panda Rehabilitación" class="w-full h-full object-contain" loading="lazy" />
                   </div>
                 </div>
               </div>
@@ -243,7 +247,7 @@ const regularTestimonials = testimonials.filter(t => !t.featured);
                 <div class="relative">
                   <div class="absolute inset-0 bg-gradient-to-br from-[#00d4aa] to-[#33c7ed] rounded-3xl blur-lg opacity-50 group-hover:opacity-75 transition-opacity"></div>
                   <div class="relative w-24 h-24 bg-gradient-to-br from-[#00d4aa] to-[#33c7ed] rounded-3xl flex items-center justify-center transform group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-lg p-4">
-                    <img src="/images/panda/panda-entrenamiento.png" alt="Panda Entrenamiento" class="w-full h-full object-contain" />
+                    <img src="/images/panda/panda-entrenamiento.png" alt="Panda Entrenamiento" class="w-full h-full object-contain" loading="lazy" />
                   </div>
                 </div>
               </div>
@@ -417,8 +421,7 @@ const regularTestimonials = testimonials.filter(t => !t.featured);
             <img
               src="/images/qr_google_review.png"
               alt="Código QR para reseña en Google Maps"
-              class="w-36 h-36 object-contain"
-            />
+              class="w-36 h-36 object-contain" loading="lazy" />
             <p class="text-xs text-lear-gray-500 mt-2 text-center">Escanea con tu celular</p>
           </div>
         </div>
@@ -803,6 +806,8 @@ const regularTestimonials = testimonials.filter(t => !t.featured);
         <div class="group relative bg-white rounded-3xl p-6 md:p-8 shadow-xl border border-[#e2e8f0] flex items-center justify-center">
           <img
             src="/images/convenios/hg-logo.png"
+            width=450
+            height=216
             alt="Logo Human The Solutions Group"
             class="max-h-24 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
             loading="lazy"
@@ -813,6 +818,8 @@ const regularTestimonials = testimonials.filter(t => !t.featured);
         <div class="group relative bg-white rounded-3xl p-6 md:p-8 shadow-xl border border-[#e2e8f0] flex items-center justify-center">
           <img
             src="/images/convenios/ha-logo.png"
+            width=500
+            height=500
             alt="Logo Hoop Academy"
             class="max-h-24 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
             loading="lazy"
@@ -823,6 +830,8 @@ const regularTestimonials = testimonials.filter(t => !t.featured);
         <div class="group relative bg-white rounded-3xl p-6 md:p-8 shadow-xl border border-[#e2e8f0] flex items-center justify-center">
           <img
             src="/images/convenios/bio-logo.png"
+            width=350
+            height=404
             alt="Logo BIOHARMONY"
             class="max-h-24 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
             loading="lazy"

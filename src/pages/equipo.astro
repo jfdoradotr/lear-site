@@ -2,7 +2,10 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="Nuestro Equipo - LEAR" description="Conoce a nuestro equipo de profesionales dedicados a tu salud">
+<Layout
+  title="Nuestro Equipo | LEAR Fisioterapia Torreón"
+  description="Conoce al equipo de LEAR en Torreón: fisioterapia con cédula profesional, entrenamiento personalizado y atención cercana en cada paso de tu recuperación."
+>
   <!-- Page Header -->
   <section class="relative py-20 bg-gradient-to-br from-lear-primary via-lear-primary-light to-lear-secondary text-white overflow-hidden">
     <div class="absolute inset-0 opacity-20">
@@ -53,6 +56,7 @@ import Layout from '../layouts/Layout.astro';
                 src="/images/team/elena-fundadora.jpg"
                 alt="Elena Alemán, fundadora y fisioterapeuta principal de LEAR"
                 class="w-full h-full object-cover object-[50%_20%]"
+                fetchpriority="high"
               />
               <div class="absolute inset-0 bg-gradient-to-t from-lear-primary/40 via-transparent to-transparent md:bg-gradient-to-r"></div>
             </div>
@@ -106,52 +110,8 @@ import Layout from '../layouts/Layout.astro';
         </div>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 max-w-6xl mx-auto">
-        <!-- Team Member 2 - Fisioterapeuta -->
-        <div class="bg-white/90 rounded-3xl shadow-2xl overflow-hidden hover:shadow-[0_20px_60px_rgba(13,75,146,0.25)] transition-all hover:-translate-y-2 border border-lear-primary/10 relative">
-          <!-- Badge con imagotipo -->
-          <div class="absolute top-4 right-4 z-10 w-12 h-12 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center shadow-lg border-2 border-lear-secondary/20">
-            <img src="/images/imagotipo.svg" alt="LEAR" class="w-8 h-8" />
-          </div>
-          <div class="bg-gradient-to-br from-lear-secondary to-lear-accent h-64 flex items-center justify-center relative overflow-hidden">
-            <!-- Imagotipo como elemento decorativo de fondo -->
-            <div class="absolute inset-0 opacity-5">
-              <img src="/images/imagotipo.svg" alt="" class="w-full h-full object-cover scale-150" />
-            </div>
-            <div class="absolute inset-0 opacity-10">
-              <div class="absolute top-0 right-0 w-40 h-40 bg-white rounded-full blur-2xl"></div>
-              <div class="absolute bottom-0 left-0 w-32 h-32 bg-white rounded-full blur-2xl"></div>
-            </div>
-            <div class="relative w-40 h-40 rounded-full bg-white/20 backdrop-blur-sm border-4 border-white/30 flex items-center justify-center shadow-2xl">
-              <span class="text-white text-5xl font-black">DP</span>
-            </div>
-          </div>
-          <div class="p-6">
-            <h3 class="text-2xl font-bold text-lear-gray-900 mb-2">Deyanira Perales</h3>
-            <p class="text-lear-primary font-medium mb-4">Fisioterapeuta • Egresada reciente</p>
-            <p class="text-lear-gray-600 mb-4">
-              Fisioterapeuta recién egresada, con gran entusiasmo y experiencia práctica en masajes terapéuticos
-              adquirida durante sus prácticas profesionales. Enfoque en movilidad, prevención de lesiones
-              y acompañamiento cercano a cada paciente.
-            </p>
-            <div class="space-y-2 text-sm text-lear-gray-600">
-              <div class="flex items-center">
-                <svg class="w-5 h-5 shrink-0 text-lear-primary mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-                <span>Licenciatura en Fisioterapia</span>
-              </div>
-              <div class="flex items-center">
-                <svg class="w-5 h-5 shrink-0 text-lear-primary mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-                <span>Experiencia práctica en masajes terapéuticos</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Team Member 3 - Entrenador Personal -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-3xl mx-auto">
+        <!-- Team Member 2 - Entrenador Personal -->
         <div class="bg-white/90 rounded-3xl shadow-2xl overflow-hidden hover:shadow-[0_20px_60px_rgba(13,75,146,0.25)] transition-all hover:-translate-y-2 border border-lear-primary/10 relative">
           <!-- Badge con imagotipo -->
           <div class="absolute top-4 right-4 z-10 w-12 h-12 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center shadow-lg border-2 border-lear-accent/20">
@@ -200,7 +160,7 @@ import Layout from '../layouts/Layout.astro';
           </div>
         </div>
 
-        <!-- Team Member 4 - Recepción / Administrativo -->
+        <!-- Team Member 3 - Recepción / Administrativo -->
         <div class="bg-white/90 rounded-3xl shadow-2xl overflow-hidden hover:shadow-[0_20px_60px_rgba(13,75,146,0.25)] transition-all hover:-translate-y-2 border border-lear-primary/10 relative">
           <!-- Badge con imagotipo -->
           <div class="absolute top-4 right-4 z-10 w-12 h-12 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center shadow-lg border-2 border-lear-primary-light/20">
@@ -309,7 +269,7 @@ import Layout from '../layouts/Layout.astro';
         ¿Quieres conocernos mejor?
       </h2>
       <p class="text-xl text-white/90 mb-8">
-        Muy pronto podrás agendar una consulta inicial directamente con nuestro equipo.
+        Escríbenos por WhatsApp y agenda tu consulta inicial con nuestro equipo.
       </p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
         <a

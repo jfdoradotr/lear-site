@@ -17,7 +17,7 @@ const banners = getScheduledHolidayConfigs();
       return (
         <aside
           id={`holiday-banner-${config.id}`}
-          role="banner"
+          aria-label={`Aviso: ${config.reason}`}
           class={`
             hidden relative w-full bg-gradient-to-r ${config.theme.bgGradient}
             backdrop-blur-xl border-b border-gray-200/50

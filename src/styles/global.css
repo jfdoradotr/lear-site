@@ -68,3 +68,29 @@
 .animate-scroll.paused {
   animation-play-state: paused;
 }
+
+/*
+ * Indicador de foco para navegación con teclado.
+ *
+ * El sitio usa efectos :hover por todos lados, que no existen para quien navega
+ * con Tab. Sin esto no hay forma de saber dónde estás parado.
+ *
+ * Se usa :where() para que la especificidad quede en 0 y cualquier utilidad de
+ * Tailwind pueda sobrescribirlo elemento por elemento.
+ */
+:where(a, button, [role="button"], input, select, textarea, summary, [tabindex]):focus-visible {
+  outline: 3px solid #0d4b92;
+  outline-offset: 3px;
+}
+
+/* Sobre el degradado oscuro del footer el azul de marca no se distingue. */
+footer :where(a, button):focus-visible {
+  outline-color: #ffffff;
+}
+
+/* Respeta a quien pidió menos movimiento en su sistema. */
+@media (prefers-reduced-motion: reduce) {
+  .animate-scroll {
+    animation: none;
+  }
+}

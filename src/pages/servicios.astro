@@ -2,7 +2,10 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="Servicios - LEAR" description="Descubre nuestros servicios de fisioterapia, rehabilitación y entrenamiento personalizado">
+<Layout
+  title="Servicios de Fisioterapia | LEAR Torreón"
+  description="Fisioterapia, rehabilitación integral y entrenamiento personalizado en Torreón, Coahuila. Valoración inicial de 90 minutos y plan de tratamiento a tu medida."
+>
   <!-- Page Header -->
   <section class="relative py-20 bg-gradient-to-br from-lear-primary via-lear-primary-light to-lear-secondary text-white overflow-hidden">
     <div class="absolute inset-0 opacity-20">
@@ -58,7 +61,7 @@ import Layout from '../layouts/Layout.astro';
             <!-- Content -->
             <div class="flex-1 bg-white rounded-3xl p-8 shadow-xl border border-lear-primary/10 hover:shadow-2xl transition-shadow">
               <div class="flex items-center gap-3 mb-4">
-                <img src="/images/panda/panda-fisioterapia.png" alt="Panda Valoración" class="w-10 h-10 object-contain" />
+                <img src="/images/panda/panda-fisioterapia.png" alt="Panda Valoración" class="w-10 h-10 object-contain" loading="lazy" />
                 <h3 class="text-2xl font-black text-lear-gray-900">Valoración Inicial</h3>
               </div>
               <div class="flex items-center gap-2 mb-4 text-lear-primary font-semibold">
@@ -208,10 +211,10 @@ import Layout from '../layouts/Layout.astro';
         <div id="fisioterapia" class="grid md:grid-cols-2 gap-12 items-center scroll-mt-24">
           <div>
             <div class="inline-flex items-center gap-3 px-4 py-2 bg-lear-primary/10 rounded-full mb-4">
-              <img src="/images/panda/panda-fisioterapia.png" alt="Panda Fisioterapia" class="w-12 h-12 object-contain" />
+              <img src="/images/panda/panda-fisioterapia.png" alt="Panda Fisioterapia" class="w-12 h-12 object-contain" loading="lazy" />
               <span class="text-sm font-semibold text-lear-primary uppercase tracking-wide">Fisioterapia</span>
             </div>
-            <h2 class="text-3xl md:text-4xl font-black text-lear-gray-900 mb-4">Fisioterapia</h2>
+            <h3 class="text-3xl md:text-4xl font-black text-lear-gray-900 mb-4">Fisioterapia</h3>
             <p class="text-lg text-lear-gray-600 mb-6 leading-relaxed">
               Nuestro equipo de fisioterapeutas certificados ofrece tratamientos especializados
               para diversas condiciones y lesiones, utilizando técnicas modernas y equipamiento de vanguardia.
@@ -332,10 +335,10 @@ import Layout from '../layouts/Layout.astro';
           </div>
           <div class="order-1 md:order-2">
             <div class="inline-flex items-center gap-3 px-4 py-2 bg-lear-secondary/10 rounded-full mb-4">
-              <img src="/images/panda/panda-rehabilitacion.png" alt="Panda Rehabilitación" class="w-12 h-12 object-contain" />
+              <img src="/images/panda/panda-rehabilitacion.png" alt="Panda Rehabilitación" class="w-12 h-12 object-contain" loading="lazy" />
               <span class="text-sm font-semibold text-lear-secondary uppercase tracking-wide">Rehabilitación</span>
             </div>
-            <h2 class="text-3xl md:text-4xl font-black text-lear-gray-900 mb-4">Rehabilitación Integral</h2>
+            <h3 class="text-3xl md:text-4xl font-black text-lear-gray-900 mb-4">Rehabilitación Integral</h3>
             <p class="text-lg text-lear-gray-600 mb-6 leading-relaxed">
               Programas personalizados de rehabilitación diseñados para tu recuperación óptima
               y retorno a tus actividades diarias.
@@ -373,10 +376,10 @@ import Layout from '../layouts/Layout.astro';
         <div id="entrenamiento" class="grid md:grid-cols-2 gap-12 items-center scroll-mt-24">
           <div>
             <div class="inline-flex items-center gap-3 px-4 py-2 bg-lear-accent/10 rounded-full mb-4">
-              <img src="/images/panda/panda-entrenamiento.png" alt="Panda Entrenamiento" class="w-12 h-12 object-contain" />
+              <img src="/images/panda/panda-entrenamiento.png" alt="Panda Entrenamiento" class="w-12 h-12 object-contain" loading="lazy" />
               <span class="text-sm font-semibold text-lear-accent uppercase tracking-wide">Entrenamiento</span>
             </div>
-            <h2 class="text-3xl md:text-4xl font-black text-lear-gray-900 mb-4">Entrenamiento Personalizado</h2>
+            <h3 class="text-3xl md:text-4xl font-black text-lear-gray-900 mb-4">Entrenamiento Personalizado</h3>
             <p class="text-lg text-lear-gray-600 mb-6 leading-relaxed">
               Programas de entrenamiento diseñados específicamente para tus objetivos,
               nivel de condición física y necesidades individuales. Basados en metodologías
@@ -442,7 +445,7 @@ import Layout from '../layouts/Layout.astro';
         ¿Interesado en nuestros servicios?
       </h2>
       <p class="text-lg md:text-2xl text-white/90 mb-8">
-        Muy pronto podrás contactarnos directamente para encontrar el plan ideal para ti.
+        Escríbenos por WhatsApp y encontramos juntos el plan ideal para ti.
       </p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
         <a
